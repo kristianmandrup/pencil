@@ -4,7 +4,7 @@
     "email": "gabriele.ds@gmail.com"
   },
   "name": "pencil",
-  "description": "UI",
+  "description": "Custom components/tags for Jade. Extend, mixin and inherit.",
   "version": "0.1.0",
   "main": "./lib/pencil.js",
   "scripts": {
