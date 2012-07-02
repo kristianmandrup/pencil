@@ -7,6 +7,10 @@
   "description": "Custom components/tags for Jade. Extend, mixin and inherit.",
   "version": "0.1.0",
   "main": "./lib/pencil.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/behere/pencil.git"
+  },
   "scripts": {
     "prepublish": "npm prune",
     "test": "make test"
