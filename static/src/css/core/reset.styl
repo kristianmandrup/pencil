@@ -1,0 +1,88 @@
+a, abbr, acronym, address, b, big, blockquote, body, caption, cdl, center, cite, code, dd, dfn, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, i, img, input, kbd, label, legend, li, ol, p, pre, q, s, samp, small, strike, strong, sub, sup, table, tbody, td, textarea, tfoot, th, thead, tr, tt, u, ul, var
+	margin 0
+	padding 0
+	border 0
+	outline 0
+	font-size 100%
+	vertical-align baseline
+	background transparent
+
+body
+	line-height 1
+
+blockquote
+	quotes none
+
+del
+	text-decoration line-through
+
+ins
+	text-decoration none
+
+ol, ul, li
+	list-style none
+
+table
+	border-collapse collapse
+	border-spacing 0
+
+caption, th
+		text-align left
+
+fieldset, img
+		border 0
+
+address, caption, cite, code, dfn, em, strong, th, var
+		font-style normal
+		font-weight normal
+
+abbr
+acronym
+	border 0
+	font-variant normal
+
+q
+	quotes none
+	&:before
+	&:after
+		content ""
+
+h1, h2, h3, h4, h5, h6
+	font-size 100%
+
+input, textarea, select
+	font-family inherit
+	font-size inherit
+	font-weight inherit
+
+sub
+	vertical-align text-bottom
+
+sup
+	vertical-align text-top
+
+*:focus
+	outline 0
+
+html
+	body, .x-reset
+		box-sizing border-box
+		-moz-box-sizing border-box
+		-ms-box-sizing border-box
+		-webkit-box-sizing border-box
+		& *
+			box-sizing border-box
+			-moz-box-sizing border-box
+			-ms-box-sizing border-box
+			-webkit-box-sizing border-box
+
+.x-clear
+	clear both
+	display block
+	overflow hidden
+	visibility hidden
+	width 0
+	height 0
+
+.x-clearfix 
+	clearfix()

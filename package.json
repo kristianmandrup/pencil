@@ -1,16 +1,31 @@
 {
-  "author": "Gabriele Di Stefano <gabriele.ds@gmail.com>",
+  "author": {
+    "name": "Gabriele Di Stefano",
+    "email": "gabriele.ds@gmail.com"
+  },
   "name": "pencil",
   "description": "UI",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "./lib/pencil.js",
   "scripts": {
+    "prepublish": "npm prune",
     "test": "make test"
   },
-  "dependencies": {
-    "express": "*"
+  "bin": {
+    "pencil": "./bin/pencil"
   },
-  "devDependencies": {},
+  "dependencies": {
+    "bike": "*",
+    "jade": "*",
+    "stylus": "*"
+  },
+  "devDependencies": {
+    "express": "*",
+    "wrench": "*",
+    "dox": "*",
+    "mocha": "*",
+    "should": "*"
+  },
   "optionalDependencies": {},
   "engines": {
     "node": "*"

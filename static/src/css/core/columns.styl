@@ -1,0 +1,152 @@
+/*
+ * Widget Columns
+ */
+$P   ?= x-
+
+$static_grid_width   ?= 960px
+$static_grid_gutter  ?= 20px
+$static_grid_columns ?= 12
+
+$fluid_grid_width   ?= 92%
+$fluid_grid_gutter  ?= 2%
+$fluid_grid_columns ?= 12
+
+
+static_container()
+	width $static_grid_width
+	margin-left auto
+	margin-right auto
+
+fluid_container()
+	width $fluid_grid_width
+	margin-left 4%
+	margin-right 4%
+
+static_grid_width(n, c = $static_grid_columns, g = $static_grid_gutter)
+	if c == 24
+		width ($static_grid_width / c * n) - (g/2)
+	else
+		width ($static_grid_width / c * n) - g
+
+fluid_grid_width(n, c = $fluid_grid_columns, g = $fluid_grid_gutter)
+	width unit((n/c) * 100 - g, '%')
+
+static_grid_content(c)
+	if c == 24
+		margin-left ($static_grid_gutter / 4)
+		margin-right ($static_grid_gutter / 4)
+	else
+		margin-left ($static_grid_gutter / 2)
+		margin-right ($static_grid_gutter / 2)
+
+fluid_grid_content()
+	display inline
+	float left
+	margin-left ($fluid_grid_gutter / 2)
+	margin-right ($fluid_grid_gutter / 2)
+
+static_grid_(n, c = $static_grid_columns, g = $static_grid_gutter)
+	static_grid_width(n, c, g)
+	static_grid_content(c)
+
+fluid_grid_(n, c = $fluid_grid_columns, g = $fluid_grid_gutter)
+	fluid_grid_width(n, c, g)
+	fluid_grid_content()
+
+static_prefix_(n, c = $static_grid_columns, g = $static_grid_gutter)
+	//padding-left ($static_grid_width / c * n)
+	if c == 24
+		margin-left ($static_grid_width / c * n) + ($static_grid_gutter / 4)
+	else
+		margin-left ($static_grid_width / c * n) + ($static_grid_gutter / 2)
+
+static_suffix_(n, c = $static_grid_columns, g = $static_grid_gutter)
+	//padding-right ($static_grid_width / c * n)
+	if c == 24
+		margin-right ($static_grid_width / c * n) + ($static_grid_gutter / 4)
+	else
+		margin-right ($static_grid_width / c * n) + ($static_grid_gutter / 2)
+
+fluid_prefix_(n, c = $fluid_grid_columns)
+	padding-left unit((n / c) * 100, '%')
+
+fluid_suffix_(n, c = $fluid_grid_columns)
+	padding-right unit((n / c) * 100, '%')
+
+static_push_(n, c = $static_grid_columns)
+	position relative
+	left ($static_grid_width / c * n)
+
+static_pull_(n, c = $static_grid_columns)
+	position relative
+	left (- ($static_grid_width / c * n))
+
+
+
+.{$P}box-item
+	display inline
+	float left
+
+.{$P}box-columns
+.{$P}box-columns > .{$P}box-columns-12
+.{$P}box-columns > .{$P}box-columns-16
+.{$P}box-columns > .{$P}box-columns-24
+.{$P}box-columns-static
+.{$P}box-columns-static.{$P}box-columns-12
+.{$P}box-columns-static.{$P}box-columns-16
+.{$P}box-columns-static.{$P}box-columns-24
+.{$P}box-columns-full
+.{$P}box-columns-static.{$P}box-columns-full
+	static_container()
+
+.{$P}box-columns-fluid.{$P}box-columns-12
+.{$P}box-columns-fluid.{$P}box-columns-16
+.{$P}box-columns-fluid.{$P}box-columns-24
+.{$P}box-columns-fluid.{$P}box-columns-full
+	fluid_container()
+
+for cols in 24 16 12
+	for cell in 1 .. cols
+		if cell <= cols
+			
+			.{$P}box-columns
+			.{$P}box-columns-{cols}
+			.{$P}box-columns-static.{$P}box-columns-{cols}
+				if cell == cols
+					> .{$P}box-item-{cell}
+					> .{$P}box-item-full
+						static_grid_(cell, cols)
+				else
+					> .{$P}box-item-{cell}
+						static_grid_(cell, cols)
+				> .{$P}box-item-push-{cell}
+					static_push_(cell, cols)
+				> .{$P}box-item-pull-{cell}
+					static_pull_(cell, cols)
+				> .{$P}box-item-prefix-{cell}
+					static_prefix_(cell, cols)
+				>.{$P}box-item-suffix-{cell}
+					static_suffix_(cell, cols)
+
+			.{$P}box-columns-fluid.{$P}box-columns-{cols}
+				if cell == cols
+					> .{$P}box-item-{cell}
+					> .{$P}box-item-full
+						fluid_grid_(cell, cols)
+				else
+					> .{$P}box-item-{cell}
+						fluid_grid_(cell, cols)
+				> .{$P}box-item-prefix-{cell}
+					fluid_prefix_(cell, cols)
+				> .{$P}box-item-suffix-{cell}
+					fluid_suffix_(cell, cols)
+			
+.{$P}box-columns > .{$P}box-columns-alpha
+.{$P}box-columns-alpha > .{$P}box-item
+.{$P}box-item.{$P}box-item-alpha
+	margin-left 0
+
+.{$P}box-columns > .{$P}box-columns-omega
+.{$P}box-columns-omega > .{$P}box-item
+.{$P}box-item.{$P}box-item-omega
+	margin-right 0

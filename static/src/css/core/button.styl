@@ -1,0 +1,199 @@
+inline-block()
+	display inline-block
+	position relative
+	
+background-gradient(from, to)
+	background -moz-linear-gradient(top, from, to) to
+	background -webkit-gradient(linear, left top, left bottom, from(from), to(to)) to
+	background linear-gradient(top, from, to) to
+
+.x-button
+	inline-block()
+	user-select none
+	color #444444
+	font-weight bold
+	font-smoothing antialiased
+	font-size 11px
+	text-align center
+	text-decoration none
+	vertical-align middle
+	background-color #f5f5f5
+	background-gradient #f5f5f5 #f1f1f1
+	border 1px solid #DCDCDC
+	border-radius 2px 2px 2px 2px
+	line-height 27px
+	list-style none outside none
+	margin 0 14px 0 0
+	min-width 54px
+	outline medium none
+	padding 0 4px
+	white-space nowrap
+	
+	&:active
+	&.active
+	&:focus
+	&.focus
+		border-color #4D90FE
+		z-index 2
+	
+	&:hover
+		background-color #f8f8f8
+		background-gradient #f8f8f8 #f1f1f1
+		box-shadow 0 1px 1px rgba(0, 0, 0, 0.1)
+		border-color #c6c6c6
+		color #333
+		z-index 2
+
+	&:active
+	&.active
+		background-color #eeeeee
+		background-gradient #eeeeee #e0e0e0
+		box-shadow 0 1px 2px rgba(0, 0, 0, 0.1) inset
+		border-color #cccccc
+		color #333
+	
+	&.disabled
+	&:disabled
+		background-gradient #F5F5F5, #F1F1F1
+		color #888888
+		opacity 0.5
+
+	&.x-allow
+		background-gradient #4D90FE #4787ED
+		color white
+		border-color #3079ED
+	
+		&:hover
+			background-gradient #4D90FE #357ae8
+			box-shadow 0 1px 1px rgba(0, 0, 0, 0.2)
+			border-color #2f5bb7
+	
+		&:active
+		&.active
+		&:focus
+		&.focus
+			background-gradient #DD4B39 #b0281a
+			background #4d90fe
+
+	&.x-deny
+		background-gradient #DD4B39 #D14836
+		color white
+		border-color transparent
+	 
+		&:hover
+			background-gradient #DD4B39 #c53727
+			box-shadow 0 1px 1px rgba(0, 0, 0, 0.2)
+			border-color #b0281a
+	
+		&:active
+		&.active
+		&:focus
+		&.focus
+			background-gradient #DD4B39 #b0281a
+	
+	> .x-arrow
+	> .x-text
+	> .x-ico
+		display inline-block
+		position relative
+		vertical-align middle
+	> .x-arrow
+	> .x-ico
+		background transparent url('data:;base64,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') no-repeat 0 0
+	> .x-arrow
+		font-size 0
+		height 6px
+		margin-left 3px
+		width 7px
+		background-position -49px -93px
+	> .x-text
+		line-height 20px
+		margin-top -2px
+	> .x-ico
+		font-size 0
+		height 21px
+		width 21px
+		margin-top -3px
+
+		&.x-ico-clip
+			background-position 0 0
+		&.x-ico-balloon
+			background-position -21px 0
+		&.x-ico-calendar
+			background-position -42px 0
+		&.x-ico-phone
+			background-position -63px 0
+		&.x-ico-buzz
+			background-position -84px 0
+		&.x-ico-settings
+			background-position 0 -21px
+		&.x-ico-prev
+			background-position -21px -21px
+		&.x-ico-next
+			background-position -42px -21px
+		&.x-ico-refresh
+			background-position -63px -21px
+		&.x-ico-inbox
+			background-position -84px -21px
+		&.x-ico-back
+			background-position 0 -42px
+		&.x-ico-mark
+			background-position -21px -42px
+		&.x-ico-alert
+			background-position -42px -42px
+		&.x-ico-trash
+			background-position -63px -42px
+		&.x-ico-folder
+			background-position -84px -42px
+		&.x-ico-forward
+			background-position 0 -63px
+		&.x-ico-forwards
+			background-position -21px -63px
+		&.x-ico-right
+			background-position -42px -63px
+		&.x-ico-blank
+			background-position -63px -63px
+		&.x-ico-print
+			background-position -84px -63px
+		&.x-ico-up
+			background-position 0 -84px
+		&.x-ico-down
+			background-position -21px -84px
+		&.x-ico-mail
+			background-position -63px -84px
+
+
+.x-toolbar-item
+	min-width 46px
+	padding 0 10px
+	margin 5px 3px 0 0
+	line-height 24px
+	height 25px
+	background none
+	border-color transparent
+	opacity 0.7
+
+	&:hover
+		opacity 0.9
+
+	&:active
+		opacity 1 
+
+
+
+
+.x-button
+	input
+		margin 1px -2px 0
+
+	&.x-position-left
+	&.x-position-center
+		margin-right 0
+		border-top-right-radius 0
+		border-bottom-right-radius 0
+
+	&.x-position-right
+	&.x-position-center
+		margin-left -5px
+		border-top-left-radius 0
+		border-bottom-left-radius 0

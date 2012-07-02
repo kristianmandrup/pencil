@@ -1,0 +1,153 @@
+.x-tabbar
+	width 100%
+	height 30px
+	float left
+	position relative
+	overflow hidden	
+
+	.x-tabbar-strip
+		width 100%
+		height 3px
+		position absolute
+		border-style solid
+		border-color $border
+
+	.x-tabbar-body
+		width 100%
+		height 27px
+		position absolute
+		z-index 200
+
+		.x-tab
+			float left
+			height 24px
+			line-height 23px
+			margin 0 0 0 10px
+			z-index 200
+			background #fff
+			border-style solid
+			border-color $border
+			
+			*
+				cursor pointer
+
+			.x-tab-body
+				padding 0 6px 0 6px
+				display block
+
+				.x-tab-inner
+					display block
+					background none repeat scroll 0 0 transparent
+					border 0 none
+					color #416DA3
+					font-size 11px
+					font-weight bold
+					margin 0
+					outline 0 none
+					overflow-x visible
+					overflow-y hidden
+					padding 0
+					text-overflow ellipsis					
+
+			&.x-tab-active
+				//
+
+	&.x-tabbar-top
+		//
+		
+		.x-tabbar-strip
+			bottom 0
+			border-width 1px 0 0
+
+		.x-tabbar-body
+			top 0
+			padding 2px 0 0
+	
+			.x-tab
+				border-width 1px 1px 0
+	
+				.x-tab-body
+					//
+	
+					.x-tab-inner
+						//
+
+				&.x-tab-active
+					height 25px
+					line-height 24px
+						
+	&.x-tabbar-bottom
+		//
+		
+		.x-tabbar-strip
+			top 0
+			border-width 0 0 1px
+
+		.x-tabbar-body
+			bottom 0
+			padding 0 0 2px
+	
+			.x-tab
+				border-width 0 1px 1px
+	
+				.x-tab-body
+					//
+	
+					.x-tab-inner
+						//
+
+				&.x-tab-active
+					height 25px
+					line-height 24px
+					margin-top -1px
+					line-height 25px
+						
+	&.x-tabbar-left
+		width 48px
+		height 110px
+		
+		.x-tabbar-strip
+			border-width 1px 0 1px 0
+			border-color red
+			width 3px
+			height 110px
+
+		.x-tabbar-body
+			//
+	
+			.x-tab
+				//
+
+				.x-tab-body
+					//
+
+					.x-tab-inner
+						//
+
+				&.x-tab-active
+					//
+
+	&.x-tabbar-right
+		width 48px
+		height 110px
+		
+		.x-tabbar-strip
+			border-width 1px 0 1px 0
+			border-color red
+			width 3px
+			height 110px
+
+		.x-tabbar-body
+			//
+	
+			.x-tab
+				//
+	
+				.x-tab-body
+					//
+	
+					.x-tab-inner
+						//
+
+				&.x-tab-active
+					//

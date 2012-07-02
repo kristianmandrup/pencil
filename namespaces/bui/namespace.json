@@ -1,0 +1,11 @@
+{
+  "name": "bui",
+  "alias": {
+    "component": "component.component",
+    "container": "container.container",
+    "viewport": "container.viewport",
+    "panel": "panel.panel",
+    "tabs": "tab.panel"
+    
+  }
+}

@@ -1,0 +1,33 @@
+.x-scroller
+	position relative
+	overflow hidden
+	width  680px
+	height 120px
+	
+	border 1px solid #ccc
+	
+	.x-scroller-inner
+		width 20000em
+		position absolute
+		clear both
+
+		.x-scroller-item
+			float left
+			width 680px
+	
+	.x-scroller-prev
+	.x-scroller-next
+		background red
+		width 20px
+		height 20px
+		display block
+		margin 10px
+		z-index 2000
+		position absolute
+		top 0
+		border 1px solid black
+
+	.x-scroller-prev
+		left 40px
+	.x-scroller-next
+		left 100px
