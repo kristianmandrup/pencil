@@ -28,10 +28,10 @@ Pencil.define('pencil.button.button', {
   clsType: 'button',
   
   /**
-   * @method init
+   * @method initialize
    */
   
-  init: function(){
+  initialize: function(){
     this._super.apply(this, arguments);
     
     this.body = Pencil.tag('em', {

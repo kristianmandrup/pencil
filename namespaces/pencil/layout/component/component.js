@@ -22,10 +22,10 @@ Pencil.define('pencil.layout.component.component', {
   type: 'component',
   
   /**
-   * @method init
+   * @method initialize
    */
   
-  init: function(){
+  initialize: function(){
     
     this._super.apply(this, arguments);
   },

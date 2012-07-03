@@ -13,8 +13,6 @@ var Pencil = require('../../')
 
 Pencil.define('pencil.view', {
   
-  //__init: 'initialize',
-  
   /**
    * @property type
    */
@@ -52,10 +50,10 @@ Pencil.define('pencil.view', {
   content: '',
   
   /**
-   * @method init
+   * @method initialize
    */
   
-  init: function(){
+  initialize: function(){
     var me = this;
     
     if(!this.id) {

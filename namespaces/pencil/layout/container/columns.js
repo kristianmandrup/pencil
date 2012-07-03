@@ -22,10 +22,10 @@ Pencil.define('pencil.layout.container.columns', {
   type: 'columns',
   
   /**
-   * @method init
+   * @method initialize
    */
   
-  init: function(){
+  initialize: function(){
     this._super.apply(this, arguments);
     
     this.columns        = this.owner.columns        || false;

@@ -40,10 +40,10 @@ Pencil.define('pencil.panel.panel', {
   showHeader: true,
   
   /**
-   * @method init
+   * @method initialize
    */
   
-  init: function(){
+  initialize: function(){
     
     this._super.apply(this, arguments);
     

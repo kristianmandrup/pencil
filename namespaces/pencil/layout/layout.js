@@ -13,8 +13,6 @@ var Pencil = require('../../../')
 
 Pencil.define('pencil.layout.layout', {
   
-  //__init: 'initialize',
-  
   /**
    * @property type
    */
@@ -40,10 +38,10 @@ Pencil.define('pencil.layout.layout', {
   isLayout: true,
   
   /**
-   * @method init
+   * @method initialize
    */
   
-  init: function(){
+  initialize: function(){
     var me = this;
     
     this.tag = Pencil.tag().addClass(this.clsType + '-body');

@@ -22,10 +22,10 @@ Pencil.define('pencil.panel.header', {
   type: 'header',
   
   /**
-   * @method init
+   * @method initialize
    */
   
-  init: function(){
+  initialize: function(){
     
     this._super.apply(this, arguments);
     

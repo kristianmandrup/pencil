@@ -46,10 +46,10 @@ Pencil.define('pencil.container.container', {
   defaultType: 'pencil.container.container',
   
   /**
-   * @method init
+   * @method initialize
    */
   
-  init: function(){
+  initialize: function(){
     
     this._super.apply(this, arguments);
     

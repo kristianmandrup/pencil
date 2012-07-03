@@ -40,10 +40,10 @@ Pencil.define('pencil.tab.bar', {
   position: 'top',  //top,bottom,left,right
   
   /**
-   * @method init
+   * @method initialize
    */
   
-  init: function(){
+  initialize: function(){
     
     this._super.apply(this, arguments);
     

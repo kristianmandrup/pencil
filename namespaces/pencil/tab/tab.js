@@ -28,10 +28,10 @@ Pencil.define('pencil.tab.tab', {
   clsType: 'tab',
   
   /**
-   * @method init
+   * @method initialize
    */
   
-  init: function(){
+  initialize: function(){
     
     this._super.apply(this, arguments);
   },
