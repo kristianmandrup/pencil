@@ -1,15 +1,15 @@
-> ![Stage](https://github.com/behere/behere.github.com/raw/master/assets/stage/development.png)  
+> ![Stage](https://github.com/behere/behere.github.com/raw/master/assets/stage/testing.png)  
 [![Build Status](https://secure.travis-ci.org/behere/pencil.png)](http://travis-ci.org/behere/pencil)
 
-> version 0.1.0 (unstable) - [History](https://github.com/behere/pencil/blob/master/HISTORY.md)
+> version 0.1.1 (unstable) - [History](https://github.com/behere/pencil/blob/master/HISTORY.md)
 
 # Pencil
   
-  ...
+  Are you working with [Jade](https://github.com/visionmedia/jade)? Want to make __custom tags__? ...this is the place to be :-)
 
 ## Installation
 
-Install this using `npm` as follows for standalone use
+Install this using `npm` as follows
 
     $ npm install pencil
 
