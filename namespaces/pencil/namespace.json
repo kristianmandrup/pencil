@@ -1,13 +1,13 @@
 {
-	"name": "pencil",
-	"nameAlias": "pl",
-	"alias": {
-		
-		"container": "container.container",
-		"viewport": "container.viewport",
-		"panel": "panel.panel",
-		"tabs": "tab.panel",
-		"button": "button.button"
-		
-	}
+  "name": "pencil",
+  "nameAlias": "pl",
+  "alias": {
+    
+    "container": "container.container",
+    "viewport": "container.viewport",
+    "panel": "panel.panel",
+    "tabs": "tab.panel",
+    "button": "button.button"
+    
+  }
 }

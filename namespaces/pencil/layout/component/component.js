@@ -12,31 +12,31 @@ var Pencil = require('../../../../')
  */
 
 Pencil.define('pencil.layout.component.component', {
-	
-	extend: 'pencil.layout.layout',
-	
-	/**
-	 * @property type
-	 */
-	
-	type: 'component',
-	
-	/**
-	 * @method init
-	 */
-	
-	init: function(){
-		
-		this._super.apply(this, arguments);
-	},
-	
-	/**
-	 * @method render
-	 */
-	
-	render: function(){
-		
-		this._super.apply(this, arguments);			
-	}
-	
-});	
+  
+  extend: 'pencil.layout.layout',
+  
+  /**
+   * @property type
+   */
+  
+  type: 'component',
+  
+  /**
+   * @method init
+   */
+  
+  init: function(){
+    
+    this._super.apply(this, arguments);
+  },
+  
+  /**
+   * @method render
+   */
+  
+  render: function(){
+    
+    this._super.apply(this, arguments);      
+  }
+  
+});  
