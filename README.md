@@ -51,7 +51,15 @@ app.get('/', function(req, res, next){
 app.listen(3000);
 ```
 
-## Features
+## Custom tags
+
+  * ...
+
+## Extended tag object
+
+  * ...
+
+## Default extends
 
   * ...
 
