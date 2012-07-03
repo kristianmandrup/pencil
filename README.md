@@ -7,6 +7,10 @@
   
   Are you working with [Jade](https://github.com/visionmedia/jade)? Want to make __custom tags__? ...this is the place to be :-)
 
+  * extends Jade
+  * give jQuery like methods to the Tag object
+  * makes possible to create custom tags
+
 ## Installation
 
 Install this using `npm` as follows
