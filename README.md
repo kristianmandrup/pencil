@@ -76,29 +76,35 @@ app.listen(3000);
 
 Pencil comes with a few tags that have a default behavior: `html, favicon, style, script, form and input`
 
-They could include attributes or child nodes:
+They could include default attributes or child nodes:
 
 ```
 html
 => <html lang='en'></html>
-
+```
+```
 favicon(href='/favicon.ico')
 => <link href='/favicon.ico' type='image/x-icon' rel='shortcut icon' />
-
-form(action='/readme')
-=> <form type='post' action='/readme'>
+```
+```
+form(action='/action_path')
+=> <form type='post' action='/action_path'>
 =>   <input type='hidden' name='_method' value='post' />
 => </form>
-
+```
+```
 input
 => <input type="text" />
-
+```
+```
 script(src='/script_path')
 => <script type="text/javascript" scr="/script_path"></script>
-
+```
+```
 style(href='/style_path')
 => <link type='text/css' rel='stylesheet' href='/style_path' />
-
+```
+```
 style
 => <style type='text/css'></style>
 ```
