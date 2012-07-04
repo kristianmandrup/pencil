@@ -36,7 +36,7 @@ http.createServer(function (req, res) {
     , fn = pencil.compile(str, { filename: path, pretty: true })
     ; 
   
-  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.writeHead(200, { 'Content-Type': 'text/html' });
   res.end(fn({ var1: 'data1', var2: 'data2' }));
   
 }).listen(3000, '127.0.0.1');
@@ -59,6 +59,10 @@ var app = express.createServer();
 pencil.attach({
   express: express,
   server: app
+});
+
+app.configure(function(){
+  app.set('views', __dirname + '/view');
 });
 
 app.get('/', function(req, res, next){
