@@ -115,7 +115,43 @@ The main purpose of Pencil is to be able to build custom tags usable within Jade
 
 ## Extended tag object
 
-  * ...
+  * isTag = true
+  * sanitize
+  * getName
+  * tag
+  * is
+  * attr
+  * getAttr
+  * setAttr
+  * removeAttr
+  * attrToObj
+  * css
+  * addClass
+  * removeClass
+  * toggleClass
+  * hasClass
+  * append
+  * appendTo
+  * clone (*)
+  * remove
+  * prepend
+  * prependTo
+  * insertAfter
+  * insertAfterTo
+  * insertBefore
+  * insertBeforeTo
+  * show
+  * hide
+  * replaceWith
+  * hasChilden
+  * children
+  * empty
+  * clear
+  * html
+  * wrap
+  * unwrap
+  * wrapAll
+  * wrapInner
 
 ## Default extends
 
