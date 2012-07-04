@@ -72,9 +72,40 @@ app.get('/', function(req, res, next){
 app.listen(3000);
 ```
 
+## Default hacked tags
+
+Pencil comes with a few tags that have a default behavior: `html, favicon, style, script, form and input`
+
+They could include attributes or child nodes:
+
+```
+html
+=> <html lang='en'></html>
+
+favicon(href='/favicon.ico')
+=> <link href='/favicon.ico' type='image/x-icon' rel='shortcut icon' />
+
+form(action='/readme')
+=> <form type='post' action='/readme'>
+=>   <input type='hidden' name='_method' value='post' />
+=> </form>
+
+input
+=> <input type="text" />
+
+script(src='/script_path')
+=> <script type="text/javascript" scr="/script_path"></script>
+
+style(href='/style_path')
+=> <link type='text/css' rel='stylesheet' href='/style_path' />
+
+style
+=> <style type='text/css'></style>
+```
+
 ## Custom tags
 
-  * ...
+The main purpose of Pencil is to be able to build custom tags usable within Jade syntax.
 
 ## Extended tag object
 
@@ -82,7 +113,14 @@ app.listen(3000);
 
 ## Default extends
 
-  * ...
+  * include
+  * extends
+  * 
+  * pencil.ns
+  * id
+  * cls
+  * tag
+  * block
 
 ## Running Tests
 
