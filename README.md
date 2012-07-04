@@ -62,7 +62,7 @@ pencil.attach({
 });
 
 app.get('/', function(req, res, next){
-  res.end('Ciao Pencil');
+  res.render('text.jade', {});
 });
 
 app.listen(3000);
