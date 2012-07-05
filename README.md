@@ -1,7 +1,7 @@
 > ![Stage](https://github.com/behere/behere.github.com/raw/master/assets/stage/testing.png)  
 [![Build Status](https://secure.travis-ci.org/behere/pencil.png)](http://travis-ci.org/behere/pencil)
 
-> version 0.1.1 (unstable) - [History](https://github.com/behere/pencil/blob/master/HISTORY.md)
+> version 0.1.1 (stable) - [History](https://github.com/behere/pencil/blob/master/HISTORY.md)
 
 # Pencil
   
@@ -113,7 +113,11 @@ style
 
 The main purpose of Pencil is to be able to build custom tags usable within Jade syntax.
 
-## Extended tag object
+## Extended Tag object
+
+Jade's Tag object is extended with more methods to manipulate it in a jQuery like style.
+
+This is very usefull when building __custom controls__ or [filters](https://github.com/visionmedia/jade/blob/master/examples/nested-filters.js)
 
   * isTag = true
   * sanitize
