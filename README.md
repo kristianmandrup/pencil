@@ -111,7 +111,9 @@ style
 
 ## Custom tags
 
-The main purpose of Pencil is to be able to build custom tags usable within Jade syntax.
+The main purpose of Pencil is to be able to build custom tags usable within Jade syntax. Using [Bike](https://github.com/behere/bike) this comes very easy.
+
+
 
 ## Extended Tag object
 
@@ -119,7 +121,7 @@ Jade's Tag object is extended with more methods to manipulate it in a jQuery lik
 
 This is very usefull when building __custom controls__ or [filters](https://github.com/visionmedia/jade/blob/master/examples/nested-filters.js)
 
-  * isTag = true
+  * isTag
   * sanitize
   * getName
   * tag
@@ -161,12 +163,6 @@ This is very usefull when building __custom controls__ or [filters](https://gith
 
   * include
   * extends
-  * 
-  * pencil.ns
-  * id
-  * cls
-  * tag
-  * block
 
 ## Running Tests
 
