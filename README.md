@@ -122,15 +122,15 @@ Jade's Tag object is extended with more methods to manipulate it in a jQuery lik
 This is very usefull when building __custom controls__ or [filters](https://github.com/visionmedia/jade/blob/master/examples/nested-filters.js)
 
   * isTag
-  * sanitize
+  * ~~sanitize~~
   * getName
   * tag
   * is
   * attr
-  * getAttr
-  * setAttr
+  * ~~getAttr~~
+  * ~~setAttr~~
   * removeAttr
-  * attrToObj
+  * ~~attrToObj~~
   * css
   * addClass
   * removeClass
@@ -138,14 +138,14 @@ This is very usefull when building __custom controls__ or [filters](https://gith
   * hasClass
   * append
   * appendTo
-  * clone (*)
+  * ~~clone (*)~~
   * remove
   * prepend
   * prependTo
   * insertAfter
   * insertAfterTo
-  * insertBefore
-  * insertBeforeTo
+  * ~~insertBefore~~
+  * ~~insertBeforeTo~~
   * show
   * hide
   * replaceWith
