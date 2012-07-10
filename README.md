@@ -11,7 +11,7 @@ Are you working with [Jade](https://github.com/visionmedia/jade)? Want to make _
   * extends the Tag object (jQuery like methods)
   * extends *include* and *extends*
 
-This project is not intended to replace Jade, but instead to extend it.
+This project is not intended to replace Jade, but to extend it with some functionalities.
 
 ## Installation
 
