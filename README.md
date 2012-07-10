@@ -269,6 +269,22 @@ This is very usefull when building __custom controls__ or [filters](https://gith
   * include
   * extends
 
+If you set the variable `Pencil.root` with a path this will be helpful when using `include` and `extends`.
+
+```javascript
+Pencil.root = '/root';
+```
+
+With Pencil your could include an external navbar.jade like this;
+
+```
+include user/navabar@repos/hello
+```
+
+The above code will try to include the file `/root/repos/hello/view/user/navbar.jade`.
+
+The same works for `extends`
+
 ## Running Tests
 
 Install dev dependencies and make tests:
