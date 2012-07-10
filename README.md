@@ -1,15 +1,16 @@
 > ![Stage](https://github.com/behere/behere.github.com/raw/master/assets/stage/testing.png)  
 [![Build Status](https://secure.travis-ci.org/behere/pencil.png)](http://travis-ci.org/behere/pencil)
 
-> version 0.1.1 (stable) - [History](https://github.com/behere/pencil/blob/master/HISTORY.md)
+> version 0.1.1 (testing) - [History](https://github.com/behere/pencil/blob/master/HISTORY.md)
 
 # Pencil
   
-Are you working with [Jade](https://github.com/visionmedia/jade)? Want to make __custom tags__? ...this is the place to be :-)
+Are you working with [Jade](https://github.com/visionmedia/jade)? Want to make __custom tags__? Try Pencil :-)
 
-  * let's you create custom tags
-  * extends the Tag object (jQuery like methods)
-  * extends *include* and *extends*
+  * Create custom tags
+  * Use jquery like functions to manipulate tags
+  * ~~[Bootstrap](http://twitter.github.com/bootstrap/) support~~ (not yet)
+  * Extends Jade's *include* and *extends*
 
 This project is not intended to replace Jade, but to extend it with some functionalities.
 
@@ -39,7 +40,7 @@ http.createServer(function (req, res) {
   res.writeHead(200, { 'Content-Type': 'text/html' });
   res.end(fn({ var1: 'data1', var2: 'data2' }));
   
-}).listen(3000, '127.0.0.1');
+}).listen(3000);
 ```
 
 ### Use with Express
