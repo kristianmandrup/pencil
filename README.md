@@ -111,7 +111,58 @@ style
 
 ## Custom tags
 
-The main purpose of Pencil is to be able to build custom tags usable within Jade syntax. Using [Bike](https://github.com/behere/bike) this comes very easy.
+The main purpose of Pencil is to be able to build custom tags usable within Jade syntax. Using [Bike](https://github.com/behere/bike) this comes very easy. 
+__For working examples take a look at the /namespaces folder__.
+
+First you need to define a namespace.
+
+```javascript
+Pencil.ns('foo', __dirname + '/foodir');
+```
+
+The above code tells Jade's syntax to search any tag starting with the prefix `foo:*` in the /foodir directory.
+
+```
+foo:panel(title='Hello World')
+```
+
+This for examples searches the file `/foodir/panel.js`.
+
+Optionally you could set your namespace as default to avoid the use of the prefix
+
+```javascript
+Pencil.ns('foo', __dirname + '/foodir', true);
+```
+
+Now you could do this:
+
+```
+panel(title='Hello World')
+```
+Every given attribute will be passed to the custom tag object.
+
+Additionals elements in the tag name will be considered as subdirectories
+
+```
+foo:container:panel:header
+=> /foodir/container/panel/header.js
+```
+
+If specified, a `namespaces.json` file in the root of your namespace could give Pencil additional configuration:
+
+namespaces.json
+```json
+{
+  alias: {
+    "header": "container:panel:header",
+    "panel": "container:panel"
+  }
+}
+```
+
+For example, the `alias` attribute will be helpful as shortcuts for your custom tags.
+
+### Make one
 
 
 
