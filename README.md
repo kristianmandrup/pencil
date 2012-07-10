@@ -116,10 +116,16 @@ The main purpose of Pencil is to be able to build custom tags usable within Jade
 First you need to define a namespace.
 
 ```javascript
-Pencil.ns('foo', __dirname + '/foodir');
+Pencil.ns(__dirname + '/foodir');
 ```
 
-The above code tells Jade's syntax to search any tag starting with the prefix `foo:*` in the /foodir directory.
+The above code will look in the given directory for a file named `namespace.json`, the configuration of your namespace.
+
+Attributes of the json file are:
+
+  * __name__: [string] tells Jade's syntax to search any tag starting with the prefix `name:*` in the /foodir directory.
+  * __nameAlias__: [string] alias for the name
+  * __alias__: [object] key/value of alias for your custom tags used as shortcuts
 
 ```
 foo:panel(title='Hello World')
@@ -130,7 +136,7 @@ This for examples searches the file `/foodir/panel.js`.
 Optionally you could set your namespace as default to avoid the use of the prefix
 
 ```javascript
-Pencil.ns('foo', __dirname + '/foodir', true);
+Pencil.ns(__dirname + '/foodir', true);
 ```
 
 Now you could do this:
@@ -146,20 +152,6 @@ Additionals elements in the tag name will be considered as subdirectories
 foo:container:panel:header
 => /foodir/container/panel/header.js
 ```
-
-If specified, a `namespaces.json` file in the root of your namespace could give Pencil additional configuration:
-
-namespaces.json
-```json
-{
-  alias: {
-    "header": "container:panel:header",
-    "panel": "container:panel"
-  }
-}
-```
-
-For example, the `alias` attribute will be helpful as shortcuts for your custom tags.
 
 ### Make one
 
