@@ -111,8 +111,7 @@ style
 
 ## Custom tags
 
-The main purpose of Pencil is to be able to build custom tags usable within Jade syntax. Using [Bike](https://github.com/behere/bike) this comes very easy. 
-__For working examples take a look at the /namespaces folder__.
+The main purpose of Pencil is to be able to build custom tags usable within Jade syntax. Using [Bike](https://github.com/behere/bike) this comes very easy.
 
 First you need to define a namespace.
 
@@ -164,6 +163,61 @@ For example, the `alias` attribute will be helpful as shortcuts for your custom 
 
 ### Make one
 
+/foodir/container.js
+
+```javascript
+var Pencil = require('pencil');
+
+Pencil.define('foo.container', {
+
+  initialize: function(){
+    var me = this;
+    
+    this.tag
+      .tag('div')
+      .html('Hello World')
+  },
+  
+  render: function(){
+    return this;
+  }
+  
+});
+```
+
+Now inside your control you have the variable `this.tag`, this is the Jade Tag Object that you can manipulate as you like with the below functions (Extended Tag Object)
+
+```
+foo:container
+=> <div>Hello World</div>
+```
+
+Since Pencil uses [Bike](https://github.com/behere/bike) it very easy to extend your custom controls
+
+/foodir/panel.js
+
+```javascript
+var Pencil = require('pencil');
+
+Pencil.define('foo.panel', {
+  
+  extend: 'foo.container',
+  
+  initialize: function(){
+    this._super.apply(this, arguments);
+    
+    this.tag.addClass('panel');
+  }
+  
+});
+```
+
+```
+foo:panel
+=> <div class='panel'>Hello World</div>
+```
+
+__For working and complex examples take a look at the /namespaces folder__.
 
 
 ## Extended Tag object
