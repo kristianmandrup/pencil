@@ -22,7 +22,7 @@ Install this using `npm` as follows
 
 ## Quick Start
 
-### Use standalone
+### Use with default http
 
 ```javascript
 var http = require('http')
@@ -38,7 +38,7 @@ http.createServer(function (req, res) {
     ; 
   
   res.writeHead(200, { 'Content-Type': 'text/html' });
-  res.end(fn({ var1: 'data1', var2: 'data2' }));
+  res.end(fn({}));
   
 }).listen(3000);
 ```
