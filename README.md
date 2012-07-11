@@ -82,11 +82,9 @@ pencil.attach({
 });
 ```
 
-## Default hacked tags
+## Html extended tags
 
-Pencil comes with a few tags that have a default behavior: `html, favicon, style, script, form and input`
-
-They could include default attributes or child nodes:
+Pencil extends a few html tags to have default attributes.
 
 ```jade
 html
