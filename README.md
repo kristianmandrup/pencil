@@ -81,35 +81,39 @@ Pencil comes with a few tags that have a default behavior: `html, favicon, style
 
 They could include default attributes or child nodes:
 
-```
+```jade
 html
-=> <html lang='en'></html>
+// <html lang='en'></html>
 ```
-```
+```jade
 favicon(href='/favicon.ico')
-=> <link href='/favicon.ico' type='image/x-icon' rel='shortcut icon' />
+// <link href='/favicon.ico' type='image/x-icon' rel='shortcut icon' />
 ```
-```
-form(action='/action_path')
-=> <form type='post' action='/action_path'>
-=>   <input type='hidden' name='_method' value='post' />
-=> </form>
-```
-```
-input
-=> <input type="text" />
-```
-```
-script(src='/script_path')
-=> <script type="text/javascript" scr="/script_path"></script>
-```
-```
-style(href='/style_path')
-=> <link type='text/css' rel='stylesheet' href='/style_path' />
-```
-```
+```jade
 style
-=> <style type='text/css'></style>
+// <style type='text/css'></style>
+```
+```jade
+style(href='/style_path')
+// <link type='text/css' rel='stylesheet' href='/style_path' />
+```
+```jade
+script
+// <script type="text/javascript"></script>
+```
+```jade
+script(src='/script_path')
+// <script type="text/javascript" scr="/script_path"></script>
+```
+```jade
+form(action='/action_path')
+// <form type='post' action='/action_path'>
+//   <input type='hidden' name='_method' value='post' />
+// </form>
+```
+```jade
+input
+// <input type="text" />
 ```
 
 ## Custom tags
