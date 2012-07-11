@@ -91,22 +91,26 @@ html
 // <html lang='en'></html>
 ```
 ```jade
-favicon(href='/favicon.ico')
+favicon
 // <link href='/favicon.ico' type='image/x-icon' rel='shortcut icon' />
+
+favicon(href='/image.ico')
+// <link href='/image.ico' type='image/x-icon' rel='shortcut icon' />
 ```
 ```jade
+head
+  style(href='/style.css')
+// <head>
+//   <link href='/style.css' type='text/css' rel='stylesheet' />
+// </head>
+
 style
 // <style type='text/css'></style>
 ```
 ```jade
-style(href='/style_path')
-// <link type='text/css' rel='stylesheet' href='/style_path' />
-```
-```jade
 script
 // <script type="text/javascript"></script>
-```
-```jade
+
 script(src='/script_path')
 // <script type="text/javascript" scr="/script_path"></script>
 ```
@@ -114,6 +118,11 @@ script(src='/script_path')
 form(action='/action_path')
 // <form type='post' action='/action_path'>
 //   <input type='hidden' name='_method' value='post' />
+// </form>
+
+form(method='put',action='/action_path')
+// <form type='post' action='/action_path'>
+//   <input type='hidden' name='_method' value='put' />
 // </form>
 ```
 ```jade
