@@ -5,7 +5,7 @@
   },
   "name": "pencil",
   "description": "Custom tags/components for Jade. Extend, mixin and inherit.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "./lib/pencil.js",
   "repository": {
     "type": "git",

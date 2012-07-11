@@ -1,5 +1,19 @@
 # History
 
+0.2.0 / (roadmap)
+------------------
+
+  * Bootstrap support
+  * More examples
+  * Make default components
+
+0.1.2 / 2012-07-12
+------------------
+
+  * Support Express 2.x and 3.x
+  * Added http and express examples
+  * Added attach() views option
+
 0.1.1 / 2012-07-03
 ------------------
 
