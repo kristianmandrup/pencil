@@ -27,8 +27,8 @@ Install this using `npm` as follows
 
 ```javascript
 var http = require('http')
-  , pencil = require('pencil')
   , fs = require('fs')
+  , pencil = require('pencil')
   ;
 
 http.createServer(function (req, res) {
@@ -69,8 +69,18 @@ app.listen(3000);
 
 Pencil configures your [Express](http://expressjs.com/) server with defaults:
 
-  - `*.jade` files are associated to Jade parser
+  - `*.jade` files are associated to the Jade parser
   - views are located in the `./view` folder of your project
+
+To use your own configuration:
+
+```javascript
+pencil.attach({
+  express: express,           // required
+  server: app,                // required
+  views: '/path/to/my/views'  // optional
+});
+```
 
 ## Default hacked tags
 
