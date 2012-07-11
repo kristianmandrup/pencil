@@ -13,10 +13,6 @@ pencil.attach({
   server: app
 });
 
-app.configure(function(){
-  app.set('views', __dirname + '/view');
-});
-
 app.get('/', function(req, res, next){
   res.render('text.jade', {
     layout: false
