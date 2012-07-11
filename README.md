@@ -1,7 +1,7 @@
 > ![Stage](https://github.com/behere/behere.github.com/raw/master/assets/stage/testing.png)  
 [![Build Status](https://secure.travis-ci.org/behere/pencil.png)](http://travis-ci.org/behere/pencil)
 
-> version 0.1.1 (testing) - [History](https://github.com/behere/pencil/blob/master/HISTORY.md)
+> version 0.1.2 (testing) - [History](https://github.com/behere/pencil/blob/master/HISTORY.md)
 
 # Pencil
   
