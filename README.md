@@ -7,12 +7,13 @@
   
 Are you working with [Jade](https://github.com/visionmedia/jade)? Want to make __custom tags__? Try Pencil :-)
 
+This project is not intended to replace Jade, but to extend it with some features:
   * Create custom tags
   * Use jquery like functions to manipulate tags
   * ~~[Bootstrap](http://twitter.github.com/bootstrap/) support~~ (not yet)
   * Extends Jade's *include* and *extends*
 
-This project is not intended to replace Jade, but to extend it with some functionalities.
+
 
 ## Installation
 
@@ -51,8 +52,8 @@ By default:
   - views are located in the ./view folder of your project
 
 ```javascript
-var pencil = require('pencil')
-  , express = require('express')
+var express = require('express')
+  , pencil = require('pencil')
   ;
 
 var app = express.createServer();
@@ -60,10 +61,6 @@ var app = express.createServer();
 pencil.attach({
   express: express,
   server: app
-});
-
-app.configure(function(){
-  app.set('views', __dirname + '/view');
 });
 
 app.get('/', function(req, res, next){
