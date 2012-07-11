@@ -67,7 +67,9 @@ app.configure(function(){
 });
 
 app.get('/', function(req, res, next){
-  res.render('text.jade', {});
+  res.render('text.jade', {
+    layout: false
+  });
 });
 
 app.listen(3000);
