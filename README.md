@@ -82,7 +82,7 @@ pencil.attach({
 });
 ```
 
-## Html extended tags
+## Extended html tags
 
 Pencil extends a few html tags to have default attributes.
 
