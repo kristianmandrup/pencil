@@ -8,9 +8,8 @@ var express = require('express')
 
 var app = express.createServer();
 
-pencil.attach({
-  express: express,
-  server: app
+app.configure(function(){
+  app.use(pencil.express(express, app));
 });
 
 app.get('/', function(req, res, next){
