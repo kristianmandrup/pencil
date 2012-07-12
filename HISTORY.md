@@ -7,6 +7,11 @@
   * More examples
   * Make default components
 
+0.1.3 / (current)
+------------------
+
+  * Added html tags form:get, form:post, form:put, form:del
+
 0.1.2 / 2012-07-12
 ------------------
 
