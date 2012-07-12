@@ -46,7 +46,7 @@ http.createServer(function (req, res) {
 
 ### Use Express
 
-Support for Express 2.x and 3.x
+Supports Express 2.x and 3.x
 
 ```javascript
 var express = require('express')
