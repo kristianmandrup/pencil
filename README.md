@@ -52,9 +52,8 @@ var express = require('express')
 
 var app = express.createServer();
 
-pencil.attach({
-  express: express,
-  server: app
+app.configure(function(){
+  app.use(pencil.express(express, app));
 });
 
 app.get('/', function(req, res, next){
@@ -74,11 +73,9 @@ Pencil configures your [Express](http://expressjs.com/) server with defaults:
 To use your own configuration:
 
 ```javascript
-pencil.attach({
-  express: express,           // required
-  server: app,                // required
+app.use(pencil.express(express, app, {
   views: '/path/to/my/views'  // optional
-});
+}));
 ```
 
 ## Extended html tags
