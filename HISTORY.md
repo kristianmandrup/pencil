@@ -11,6 +11,7 @@
 ------------------
 
   * Added html tags form:get, form:post, form:put, form:del
+  * Extended documentation
 
 0.1.2 / 2012-07-12
 ------------------
