@@ -5,7 +5,7 @@
 
 # Pencil
   
-Are you working with [Jade](https://github.com/visionmedia/jade)? Do you want to make __custom tags__? Pencil is built on top of Jade and adds extra features:
+Are you working with [Jade](https://github.com/visionmedia/jade)? Do you want to make __custom tags__? Pencil is built on top of Jade to add extra features:
 
   * Create custom tags
   * Use jquery like functions to manipulate tags
