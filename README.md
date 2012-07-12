@@ -142,8 +142,28 @@ form:del
 ```jade
 input
 // <input type="text" />
+
+// Alias
+input:button
+input:checkbox
+input:file
+input:hidden
+input:image
+input:password
+input:radio
+input:reset
+input:submit
+input:text
 ```
 
+```jade
+button
+// <button type="button"></button>
+
+// Alias
+button:submit
+button:reset
+```
 ## Custom tags
 
 __FROM NOW ON THE DOCUMENTATION IS NOT READY YET__
