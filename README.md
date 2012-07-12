@@ -46,6 +46,8 @@ http.createServer(function (req, res) {
 
 ### Use Express
 
+Support for Express 2.x and 3.x
+
 ```javascript
 var express = require('express')
   , pencil = require('pencil')
@@ -144,7 +146,44 @@ input
 
 ## Custom tags
 
-The main purpose of Pencil is to be able to build custom tags usable within Jade syntax. Using [Bike](https://github.com/behere/bike) this comes very easy.
+__FROM NOW ON THE DOCUMENTATION IS NOT READY YET__
+
+The main purpose of Pencil is to build custom tags. Using [Bike](https://github.com/behere/bike) this comes very easy.
+
+/example.jade
+```jade
+foo:box
+// <div class='box'>Title Undefined</div>
+
+foo:box(title='This is a box')
+// <div class='box'>This is a box</div>
+```
+
+/foo/box.js
+```javascript
+var Pencil = require('pencil');
+
+Pencil.define('foo.box', {
+
+  initialize: function(){
+    var self = this
+      ;
+    
+    this.tag
+      .tag('div')
+      .addClass('box')
+      .html(this.title || 'Title Undefined')
+    ;
+  },
+  
+  render: function(){
+    return this;
+  }
+  
+});
+```
+
+### How to
 
 First you need to define a namespace.
 
