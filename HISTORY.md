@@ -3,7 +3,7 @@
 0.2.0 / (roadmap)
 ------------------
 
-  * Create Express middleware to support Pencil, it should replace the #attach() method
+  * ~~Create Express middleware to support Pencil, it should replace the #attach() method~~
   * Bootstrap support
   * More examples
   * Make default components
@@ -15,6 +15,7 @@
   * Added input tags alias just like form
   * Added button tags alias
   * Extended documentation
+  * Replaced method #attach() with and Express middleware #express()
 
 0.1.2 / 2012-07-12
 ------------------
