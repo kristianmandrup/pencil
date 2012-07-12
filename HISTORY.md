@@ -12,6 +12,8 @@
 ------------------
 
   * Added html tags form:get, form:post, form:put, form:del
+  * Added input tags alias just like form
+  * Added button tags alias
   * Extended documentation
 
 0.1.2 / 2012-07-12
