@@ -127,17 +127,11 @@ form(method='put',action='/action_path')
 //   <input type='hidden' name='_method' value='put' />
 // </form>
 
+// Alias
 form:get
-// Alias of form(method='get')
-
 form:post
-// Alias of form(method='post')
-
 form:put
-// Alias of form(method='put')
-
 form:del
-// Alias of form(method='delete')
 ```
 ```jade
 input
