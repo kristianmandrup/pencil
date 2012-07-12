@@ -3,6 +3,7 @@
 0.2.0 / (roadmap)
 ------------------
 
+  * Create Express middleware to support Pencil, it should replace the #attach() method
   * Bootstrap support
   * More examples
   * Make default components
