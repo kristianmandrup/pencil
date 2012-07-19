@@ -1,13 +1,33 @@
 {
+  "default": true,
   "name": "pencil",
   "nameAlias": "pl",
   "alias": {
     
-    "container": "container.container",
-    "viewport": "container.viewport",
-    "panel": "panel.panel",
-    "tabs": "tab.panel",
-    "button": "button.button"
+    "input":          "pencil.input",
+    "input:?type":    "pencil.input",
+    
+    "button":         "pencil.button",
+    "button:?type":   "pencil.button",
+    
+    "form":           "pencil.form",
+    "form:?method":   "pencil.form",
+    
+    "html":           "pencil.html",
+    "html:?lang":     "pencil.html",
+    
+    "favicon":        "pencil.favicon",
+    
+    "style":          "pencil.style",
+    
+    "script":         "pencil.script",
+    "script:manager": "pencil.script.manager",
+    "script:?library:?version?:?mode?": "pencil.script.cdn",
+    
+    "container":      "container.container",
+    "viewport":       "container.viewport",
+    "panel":          "pencil.panel.panel",
+    "tabs":           "tab.panel"
     
   }
 }

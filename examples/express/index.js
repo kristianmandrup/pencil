@@ -9,7 +9,7 @@ var express = require('express')
 var app = express.createServer();
 
 app.configure(function(){
-  app.use(pencil.express(express, app));
+  app.use(pencil.adapter.express(express, app, {}));
 });
 
 app.get('/', function(req, res, next){

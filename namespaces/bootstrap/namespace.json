@@ -1,6 +1,9 @@
 {
+  "default": false,
   "name": "bootstrap",
   "nameAlias": "bs",
   "alias": {
+  
+    "script:?mode?": "bootstrap.script"
   }
 }

@@ -6,13 +6,24 @@
   * ~~Create Express middleware to support Pencil, it should replace the #attach() method~~
   * Bootstrap support
   * More examples
-  * Make default components
+  * Make all default components
 
-0.1.3 / (current)
+0.1.4 / (current)
 ------------------
 
+  * Tests on the new state object available and unique on each request / compile
+
+0.1.3 / 2012-07-19
+------------------
+
+  * Added more Pencil default components
+  * Added support for parameters on custom tags
+  * Added support for custom adapters (express made one of them)
+  * Added #register() method
+  * Started support for Bootstrap
+  * Refactor code
   * Added html tags form:get, form:post, form:put, form:del
-  * Added input tags alias just like form
+  * Added html tag input and input:?mode?
   * Added button tags alias
   * Extended documentation
   * Replaced method #attach() with and Express middleware #express()
