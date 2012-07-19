@@ -19,9 +19,11 @@
     "pencil": "./bin/pencil"
   },
   "dependencies": {
-    "bike": "*",
+    "bike": "0.1.3",
     "jade": "*",
-    "stylus": "*"
+    "stylus": "*",
+    "underscore": "*",
+    "eventemitter2": "*"
   },
   "devDependencies": {
     "express": "*",
