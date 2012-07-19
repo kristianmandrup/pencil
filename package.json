@@ -19,7 +19,7 @@
     "pencil": "./bin/pencil"
   },
   "dependencies": {
-    "bike": "0.1.3",
+    "bike": "0.5.4",
     "jade": "*",
     "stylus": "*",
     "underscore": "*",
