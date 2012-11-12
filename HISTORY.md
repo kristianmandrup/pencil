@@ -8,10 +8,17 @@
   * More examples
   * Make all default components
 
-0.1.4 / (current)
+0.1.5 / (current)
+------------------
+
+  * ...
+
+0.1.4 / 2012-11-12
 ------------------
 
   * Tests on the new state object available and unique on each request / compile
+  * Added pencil:option custom tag
+  * Fixed non html tags children parsing
 
 0.1.3 / 2012-07-19
 ------------------
