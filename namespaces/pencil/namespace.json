@@ -13,6 +13,9 @@
     "form":           "pencil.form",
     "form:?method":   "pencil.form",
     
+    "option":         "pencil.option",
+    "option:?value":  "pencil.option",
+    
     "html":           "pencil.html",
     "html:?lang":     "pencil.html",
     
