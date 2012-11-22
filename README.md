@@ -1,5 +1,5 @@
 > ![Stage](https://github.com/gabrieleds/behere.github.com/raw/master/assets/stage/testing.png)  
-[![Build Status](https://secure.travis-ci.org/behere/pencil.png)](http://travis-ci.org/behere/pencil)
+[![Build Status](https://secure.travis-ci.org/gabrieleds/pencil.png)](http://travis-ci.org/gabrieleds/pencil)
 
 > version 0.1.4 (testing) - [History](https://github.com/gabrieleds/pencil/blob/master/HISTORY.md)
 
