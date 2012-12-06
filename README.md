@@ -53,7 +53,7 @@ var express = require('express')
 var app = express.createServer();
 
 app.configure(function(){
-  app.use(pencil.express(express, app));
+  app.use(pencil.adapter.express(express, app));
 });
 
 app.get('/', function(req, res, next){
@@ -73,7 +73,7 @@ Pencil configures your [Express](http://expressjs.com/) server with defaults:
 To use your own configuration:
 
 ```javascript
-app.use(pencil.express(express, app, {
+app.use(pencil.adapter.express(express, app, {
   views: '/path/to/my/views'  // optional
 }));
 ```
