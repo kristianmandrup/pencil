@@ -30,7 +30,11 @@
     "container":      "container.container",
     "viewport":       "container.viewport",
     "panel":          "pencil.panel.panel",
-    "tabs":           "tab.panel"
+    "tabs":           "tab.panel",
+    
+    "captcha:?key?":  "pencil.captcha",
+    
+    "ext:?type?:?username?:?extension?": "pencil.extension"
     
   }
 }
