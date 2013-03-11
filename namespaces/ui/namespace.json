@@ -1,0 +1,17 @@
+{
+  "default": false,
+  "name": "ui",
+  "alias": {
+    
+    "view":							"ui.view",
+    "panel":						"ui.panel",
+    "panel:?region":		"ui.panel",
+
+    "container":				"ui.container.container",
+    "container:border":	"ui.container.border",
+
+
+    "window":		"ui.window"
+    
+  }
+}

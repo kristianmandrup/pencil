@@ -33,45 +33,57 @@ Pencil.define('pencil.captcha', {
           .text('var RecaptchaOptions = {theme: "custom", custom_theme_widget: "recaptcha_widget"};')
       , widget = Pencil
           .tag('div')
-          .id("recaptcha_widget")
+          .id('recaptcha_widget')
           //.hide()
           
           .append(
-            Pencil.tag('div').id("recaptcha_image"),
-            Pencil.tag('div').addClass("recaptcha_only_if_incorrect_sol").text('Incorrect please try again'),
-            Pencil.tag('span').addClass("recaptcha_only_if_image").text('Enter the words above:'),
-            Pencil.tag('span').addClass("recaptcha_only_if_audio").text('Enter the numbers you hear:'),
-            Pencil.tag('input').attr({
-              type: 'text',
-              name: 'recaptcha_response_field',
-              id: 'recaptcha_response_field'
-            }),
-            Pencil.tag('a').attr({
-              href: 'javascript:Recaptcha.reload()'
-            }).text("Get another CAPTCHA"),
             
-            Pencil.tag('div').addClass("recaptcha_only_if_image")
+
+            Pencil.tag('div').addClass('control-group')
               .append(
-                Pencil.tag('a').attr({
-                  href: 'javascript:Recaptcha.switch_type(\'audio\')'
-                }).text("Get an audio CAPTCHA")
-              ),
-            
-            Pencil.tag('div').addClass("recaptcha_only_if_audio")
-              .append(
-                Pencil.tag('a').attr({
-                  href: 'javascript:Recaptcha.switch_type(\'image\')'
-                }).text("Get an image CAPTCHA")
-              ),
-            
-            Pencil.tag('div')
-              .append(
-                Pencil.tag('a').attr({
-                  href: 'javascript:Recaptcha.showhelp()'
-                }).text("Help")
+
+                Pencil.tag('label').addClass('control-label').text('Prove you\'re not a robot'),
+
+                Pencil.tag('div').addClass('img-polaroid').id('recaptcha_image'),
+                Pencil.tag('div').addClass('recaptcha_only_if_incorrect_sol').text('Incorrect please try again'),
+                Pencil.tag('span').addClass('help-block', 'recaptcha_only_if_image').text('Type the two pieces of text:'),
+                Pencil.tag('span').addClass('help-block', 'recaptcha_only_if_audio').text('Type what you hear:'),
+                
+
+                Pencil.tag('div').addClass('controls', 'controls-row')
+                  .append(
+
+                    Pencil.tag('input').addClass('span2').attr({
+                      type: 'text',
+                      name: 'recaptcha_response_field',
+                      id: 'recaptcha_response_field'
+                    }),
+
+                    Pencil.tag('div').addClass('btn-group', 'span2')
+                      .append(
+
+                        Pencil.tag('a').addClass('btn').attr({
+                          href: 'javascript:Recaptcha.reload()'
+                        }).append(Pencil.tag('div').addClass('icon-repeat')),
+                        
+                        Pencil.tag('a').addClass('btn', 'recaptcha_only_if_image').attr({
+                          href: 'javascript:Recaptcha.switch_type(\'audio\')'
+                        }).append(Pencil.tag('div').addClass('icon-volume-up')),
+                        
+                        Pencil.tag('a').addClass('btn', 'recaptcha_only_if_audio').attr({
+                          href: 'javascript:Recaptcha.switch_type(\'image\')'
+                        }).append(Pencil.tag('div').addClass('icon-eye-open')),
+                        
+                        Pencil.tag('a').addClass('btn').attr({
+                          href: 'javascript:Recaptcha.showhelp()'
+                        }).append(Pencil.tag('div').addClass('icon-info-sign'))
+
+                      )
+
+                  )
               )
           )
-      , script_2 = Pencil.tag('script').attr('src', 'http://www.google.com/recaptcha/api/challenge?k='+key)
+      , script_2 = Pencil.tag('script').attr('src', 'https://www.google.com/recaptcha/api/challenge?k='+key)
       ;
     
 
@@ -82,7 +94,7 @@ Pencil.define('pencil.captcha', {
       script_2
     );
     
-    tag.prepend(Pencil.tag('h3').text('CAPTCHA 3'));
+    //tag.prepend(Pencil.tag('h3').text('CAPTCHA 3'));
     
    
     

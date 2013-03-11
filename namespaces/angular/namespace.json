@@ -1,0 +1,10 @@
+{
+  "default": false,
+  "name": "angular",
+  "nameAlias": "ng",
+  "alias": {
+    
+    "view":          "angular.view"
+    
+  }
+}

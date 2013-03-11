@@ -13,7 +13,7 @@ var Pencil = require('../../../')
 
 Pencil.define('pencil.container.viewport', {
   
-  extend: 'pencil.container.container',
+  extend: 'pencil.view',
   
   /**
    * @property type
@@ -37,6 +37,17 @@ Pencil.define('pencil.container.viewport', {
    * @property layoutType
    */
   
-  layoutType: 'container'
+  layoutType: 'container',
+  
+  /**
+   * @method initialize
+   */
+  
+  initialize: function(){
+    
+    this._super.apply(this, arguments);
+    
+    this.tag.attr('viewport', '')
+  }
   
 }); 

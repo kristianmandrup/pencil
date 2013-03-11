@@ -13,9 +13,9 @@ var Pencil = require('../../../')
  * cdn
  */
 
-Pencil.define('pencil.script.cdn', {
+Pencil.define('pencil.style.cdn', {
   
-  extend: 'pencil.script',
+  extend: 'pencil.style',
   
   /**
    * @method initialize
@@ -32,19 +32,8 @@ Pencil.define('pencil.script.cdn', {
     
     var library = tag.param('library');
     
-    if(library === 'jquery'){
-      link = baseUrl + 'jquery/1.8.3/jquery.min.js';
-    }
-    else if(library == 'lodash'){
-      link = baseUrl + 'lodash.js/1.0.0-rc.3/lodash.min.js';
-    }
-    else if(library == 'angular'){
-      link = baseUrl + 'angular.js/1.1.1/angular.min.js';
-    }
-    else if(library == 'require'){
-      //link = baseUrl + 'require.js/2.1.1/require.min.js';
-      link = '/js/libs/require/require.min.js'
-      tag.attr('data-main', tag.attr('src'));
+    if(library === 'bootstrap'){
+      link = '/css/bootstrap.min.css';
     }
     else{
       link = library;
@@ -52,7 +41,7 @@ Pencil.define('pencil.script.cdn', {
     
     if(link){
       tag
-        .attr('src', link)
+        .attr('href', link)
       ;  
     }
     

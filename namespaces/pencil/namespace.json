@@ -22,15 +22,21 @@
     "favicon":        "pencil.favicon",
     
     "style":          "pencil.style",
+    "style:?library": "pencil.style.cdn",
     
     "script":         "pencil.script",
     "script:manager": "pencil.script.manager",
-    "script:?library:?version?:?mode?": "pencil.script.cdn",
+    "script:?library":"pencil.script.cdn",
+
+    "meta":           "pencil.meta",
+    "meta:?type":     "pencil.meta",
+
+    "noscript":       "pencil.noframe",
     
-    "container":      "container.container",
-    "viewport":       "container.viewport",
-    "panel":          "pencil.panel.panel",
-    "tabs":           "tab.panel",
+    "container":      "pencil.container.container",
+    "viewport":       "pencil.container.viewport",
+    "panel22":        "pencil.panel.panel",
+    "tabs22":         "pencil.tab.panel",
     
     "captcha:?key?":  "pencil.captcha",
     

@@ -23,16 +23,22 @@ Pencil.define('pencil.style', {
     this._super.apply(this);
     
     var tag = this.tag
-      , href = tag.attr('href')
+      , source = tag.attr('href') || tag.attr('src')
+      , hasSource = !!source
       ;
-      
-    if(href){
+
+    if(hasSource){
+      tag.removeAttr('href', 'src');
+    }
+
+    if((tag && tag.parent && tag.parent.name === 'head') || hasSource){
       // inside the header
       tag
         .tag('link')
         .attr({
           'type': 'text/css',
-          'rel': 'stylesheet'
+          'rel': 'stylesheet',
+          'href': source
         })
       ;
     }else{
