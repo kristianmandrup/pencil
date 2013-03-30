@@ -2,4 +2,9 @@
 *.pid
 *.git
 *.project
+.project
 node_modules/
+test/
+tests/
+example/
+examples/
