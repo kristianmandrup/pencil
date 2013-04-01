@@ -1,6 +1,6 @@
 {
   "name": "pencil",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Custom tags/components for Jade. Extend, mixin and inherit.",
   "license": "MIT",
   "author": {
