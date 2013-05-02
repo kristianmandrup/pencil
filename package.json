@@ -1,18 +1,17 @@
 {
   "name": "pencil",
   "version": "0.1.5",
-  "description": "Custom tags/components for Jade. Extend, mixin and inherit.",
+  "description": "Custom tags/components for Jade. Extend, mixin and inherit",
   "license": "MIT",
   "author": {
     "name": "Gabriele Di Stefano",
     "email": "gabriele.ds@gmail.com",
-    "url": "http://behere.eu"
+    "url": "https://dev.behere.eu"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/behere/pencil.git"
   },
-  "keywords": ["node", "template", "jade", "express", "connect"],
   "engines": {
     "node": "*"
   },
@@ -25,6 +24,7 @@
     "test": "make test"
   },
   "dependencies": {
+    "friend": "*",
     "bike": "*",
     "jade": "*",
     "stylus": "*",
@@ -37,5 +37,13 @@
     "dox": "*",
     "mocha": "*",
     "should": "*"
-  }
+  },
+  "keywords": [
+    "template",
+    "custom",
+    "tag",
+    "jade",
+    "express",
+    "connect"
+  ]
 }

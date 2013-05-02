@@ -12,6 +12,7 @@
 ------------------
 
   * Added return on #start and #stop
+  * Fixing and factoring
 
 0.1.4 / 2012-11-12
 ------------------

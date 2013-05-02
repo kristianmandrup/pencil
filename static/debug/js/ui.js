@@ -12946,7 +12946,7 @@ require.relative = function (parent) {
 require.register("klass.js", function(module, exports, require){
 /*!
  * Behere
- * Copyright(c) 2012 Gabriele Di Stefano <gabriele.ds@gmail.com>
+ * Copyright(c) 2013 Gabriele Di Stefano <gabriele.ds@gmail.com>
  * MIT Licensed
  */
 
@@ -13153,7 +13153,7 @@ Klass.create = function(name, plain, options, callback){
 require.register("klass/cache.js", function(module, exports, require){
 /*!
  * Behere
- * Copyright(c) 2012 Gabriele Di Stefano <gabriele.ds@gmail.com>
+ * Copyright(c) 2013 Gabriele Di Stefano <gabriele.ds@gmail.com>
  * MIT Licensed
  */
 
@@ -13396,7 +13396,7 @@ exports = module.exports = Cache;
 require.register("klass/base.js", function(module, exports, require){
 /*!
  * Behere
- * Copyright(c) 2012 Gabriele Di Stefano <gabriele.ds@gmail.com>
+ * Copyright(c) 2013 Gabriele Di Stefano <gabriele.ds@gmail.com>
  * MIT Licensed
  */
 
@@ -13418,7 +13418,7 @@ var Base = exports = module.exports = Proto.extend({
 require.register("klass/proto.js", function(module, exports, require){
 /*!
  * Behere
- * Copyright(c) 2012 Gabriele Di Stefano <gabriele.ds@gmail.com>
+ * Copyright(c) 2013 Gabriele Di Stefano <gabriele.ds@gmail.com>
  * MIT Licensed
  */
 
@@ -13565,7 +13565,7 @@ var Proto = exports = module.exports = {
 require.register("klass/namespace.js", function(module, exports, require){
 /*!
  * Behere
- * Copyright(c) 2012 Gabriele Di Stefano <gabriele.ds@gmail.com>
+ * Copyright(c) 2013 Gabriele Di Stefano <gabriele.ds@gmail.com>
  * MIT Licensed
  */
 
@@ -15523,7 +15523,7 @@ window.klass = require("klass");
 
 }(window.jQuery);/*!
  * Behere
- * Copyright(c) 2012 Gabriele Di Stefano <gabriele.ds@gmail.com>
+ * Copyright(c) 2013 Gabriele Di Stefano <gabriele.ds@gmail.com>
  * MIT Licensed
  */
 
@@ -15545,7 +15545,7 @@ BUI.klass = klass.attach(BUI);
 
 /*!
  * Behere
- * Copyright(c) 2012 Gabriele Di Stefano <gabriele.ds@gmail.com>
+ * Copyright(c) 2013 Gabriele Di Stefano <gabriele.ds@gmail.com>
  * MIT Licensed
  */
 
@@ -15579,7 +15579,7 @@ bui.define('foo.view', {
   
 });/*!
  * Behere
- * Copyright(c) 2012 Gabriele Di Stefano <gabriele.ds@gmail.com>
+ * Copyright(c) 2013 Gabriele Di Stefano <gabriele.ds@gmail.com>
  * MIT Licensed
  */
 
@@ -15600,7 +15600,7 @@ bui.define('foo.model', {
   
 });/*!
  * Behere
- * Copyright(c) 2012 Gabriele Di Stefano <gabriele.ds@gmail.com>
+ * Copyright(c) 2013 Gabriele Di Stefano <gabriele.ds@gmail.com>
  * MIT Licensed
  */ 
   
@@ -15610,7 +15610,7 @@ bui.define('foo.container.container', {
   
 });/*!
  * Behere
- * Copyright(c) 2012 Gabriele Di Stefano <gabriele.ds@gmail.com>
+ * Copyright(c) 2013 Gabriele Di Stefano <gabriele.ds@gmail.com>
  * MIT Licensed
  */ 
   

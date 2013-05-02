@@ -1,7 +1,7 @@
 > ![Stage](https://github.com/gabrieleds/behere.github.com/raw/master/assets/stage/testing.png)  
 [![Build Status](https://secure.travis-ci.org/gabrieleds/pencil.png)](http://travis-ci.org/gabrieleds/pencil)
 
-> version 0.1.4 (testing) - [History](https://github.com/gabrieleds/pencil/blob/master/HISTORY.md)
+> version 0.1.5 (testing) - [History](https://github.com/gabrieleds/pencil/blob/master/HISTORY.md)
 
 # Pencil
   
@@ -22,7 +22,7 @@ Install this using `npm` as follows
 
 ### Use default http server
 
-```javascript
+```js
 var http = require('http')
   , fs = require('fs')
   , pencil = require('pencil')
@@ -45,7 +45,7 @@ http.createServer(function (req, res) {
 
 Supports Express 2.x and 3.x
 
-```javascript
+```js
 var express = require('express')
   , pencil = require('pencil')
   ;
@@ -72,7 +72,7 @@ Pencil configures your [Express](http://expressjs.com/) server with defaults:
 
 To use your own configuration:
 
-```javascript
+```js
 app.use(pencil.adapter.express(express, app, {
   views: '/path/to/my/views'  // optional
 }));
@@ -168,7 +168,7 @@ foo:box(title='This is a box')
 ```
 
 /foo/box.js
-```javascript
+```js
 var Pencil = require('pencil');
 
 Pencil.define('foo.box', {
@@ -195,7 +195,7 @@ Pencil.define('foo.box', {
 
 First you need to define a namespace.
 
-```javascript
+```js
 Pencil.ns(__dirname + '/foodir');
 ```
 
@@ -215,7 +215,7 @@ This for examples searches the file `/foodir/panel.js`.
 
 Optionally you could set your namespace as default to avoid the use of the prefix
 
-```javascript
+```js
 Pencil.ns(__dirname + '/foodir', true);
 ```
 
@@ -237,7 +237,7 @@ foo:container:panel:header
 
 /foodir/container.js
 
-```javascript
+```js
 var Pencil = require('pencil');
 
 Pencil.define('foo.container', {
@@ -268,7 +268,7 @@ Since Pencil uses [Bike](https://github.com/behere/bike) it very easy to extend 
 
 /foodir/panel.js
 
-```javascript
+```js
 var Pencil = require('pencil');
 
 Pencil.define('foo.panel', {
@@ -343,7 +343,7 @@ This is very usefull when building __custom controls__ or [filters](https://gith
 
 If you set the variable `Pencil.root` with a path this will be helpful when using `include` and `extends`.
 
-```javascript
+```js
 Pencil.root = '/root';
 ```
 
