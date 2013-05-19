@@ -1,7 +1,7 @@
 {
   "name": "pencil",
-  "version": "0.1.5",
-  "description": "Custom tags/components for Jade. Extend, mixin and inherit",
+  "version": "1.0.0",
+  "description": "Custom tags/components for Jade. Extend and inherit",
   "license": "MIT",
   "author": {
     "name": "Gabriele Di Stefano",
@@ -10,40 +10,25 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/behere/pencil.git"
+    "url": "git://github.com/gabrieleds/pencil.git"
   },
   "engines": {
     "node": "*"
   },
   "main": "./lib/pencil.js",
-  "bin": {
-    "pencil": "./bin/pencil"
-  },
   "scripts": {
     "prepublish": "npm prune",
-    "test": "make test"
+    "test": "node ./run-test"
   },
   "dependencies": {
-    "friend": "*",
-    "bike": "*",
     "jade": "*",
-    "stylus": "*",
-    "underscore": "*",
-    "eventemitter2": "*"
+    "stylus": "*"
   },
   "devDependencies": {
-    "express": "*",
-    "wrench": "*",
-    "dox": "*",
     "mocha": "*",
-    "should": "*"
+    "uubench": "*",
+    "should": "*",
+    "commander": "*"
   },
-  "keywords": [
-    "template",
-    "custom",
-    "tag",
-    "jade",
-    "express",
-    "connect"
-  ]
+  "keywords": []
 }

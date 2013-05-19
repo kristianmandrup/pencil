@@ -1,46 +1,107 @@
 {
   "default": true,
-  "name": "pencil",
-  "nameAlias": "pl",
-  "alias": {
-    
-    "input":          "pencil.input",
-    "input:?type":    "pencil.input",
-    
-    "button":         "pencil.button",
-    "button:?type":   "pencil.button",
-    
-    "form":           "pencil.form",
-    "form:?method":   "pencil.form",
-    
-    "option":         "pencil.option",
-    "option:?value":  "pencil.option",
-    
-    "html":           "pencil.html",
-    "html:?lang":     "pencil.html",
-    
-    "favicon":        "pencil.favicon",
-    
-    "style":          "pencil.style",
-    "style:?library": "pencil.style.cdn",
-    
-    "script":         "pencil.script",
-    "script:manager": "pencil.script.manager",
-    "script:?library":"pencil.script.cdn",
+  "prefix": "pencil",
+  "alias": "pl",
+  "tags": {
 
-    "meta":           "pencil.meta",
-    "meta:?type":     "pencil.meta",
+    "pencil.html": {
+      "alias": [
+        "html:?lang"
+      ]
+    },
 
-    "noscript":       "pencil.noframe",
-    
-    "container":      "pencil.container.container",
-    "viewport":       "pencil.container.viewport",
-    "panel22":        "pencil.panel.panel",
-    "tabs22":         "pencil.tab.panel",
-    
-    "captcha:?key?":  "pencil.captcha",
-    
-    "ext:?type?:?username?:?extension?": "pencil.extension"
-    
+    "pencil.favicon": {
+      "alias": [
+        "favicon:*"
+      ]
+    },
+
+    "pencil.form": {
+      "alias": [
+        "form:?method"
+      ]
+    },
+
+    "pencil.input": {
+      "alias": [
+        "input:?type:?name?:?value?"
+      ]
+    },
+
+    "pencil.button": {
+      "alias": [
+        "button:?type"
+      ]
+    },
+
+    "pencil.option": {
+      "alias": [
+        "option:?value:?label?"
+      ]
+    },
+
+    "pencil.style": {},
+
+    "pencil.style.cdn": {
+      "alias": [
+        "style:?library"
+      ]
+    },
+
+    "pencil.script": {},
+
+    "pencil.script.manager": {},
+
+    "pencil.script.cdn": {
+      "alias": [
+        "script:?library"
+      ]
+    },
+
+    "pencil.meta": {
+      "alias": [
+        "meta:?type"
+      ]
+    },
+
+    "pencil.noframe": {},
+
+    "pencil.container.container": {
+      "alias": [
+        "container"
+      ]
+    },
+
+    "pencil.container.viewport": {
+      "alias": [
+        "viewport"
+      ]
+    },
+
+    "pencil.panel.panel": {
+      "alias": [
+        "panel"
+      ]
+    },
+
+    "pencil.tab.panel": {
+      "alias": [
+        "tabs"
+      ]
+    },
+
+    "pencil.captcha": {
+      "alias": [
+        "captcha:?key?"
+      ]
+    },
+
+    "pencil.extension": {
+      "alias": [
+        "ext:?type?:?username?:?extension?"
+      ]
+    }
+
   }
+
 }

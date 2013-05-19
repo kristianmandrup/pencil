@@ -1,40 +1,55 @@
-/*!
- * Pencil
- * Copyright(c) 2013 Gabriele Di Stefano <gabriele.ds@gmail.com>
- * MIT Licensed
- */  
 
-var Pencil = require('../../')
+var pencil = require('../../')
   ;
 
-/**
- * form
- */
+module.exports = pencil.extend({
 
-Pencil.define('pencil.button', {
-  
-  extend: 'pencil.tag',
-  
-  /**
-   * @method initialize
-   */
-  
-  initialize: function(){
-    this._super.apply(this);
-    
-    var tag = this.tag.tag('button')
-      , type = tag.param('type') || 'button'
+  render: function () {
+
+    this.name = 'button';
+
+    var type = this.attr('type')
+      , hasType = !!type
       ;
     
-    if(!tag.attr('type')){
-      tag.attr('type', type);
+    type = type || this.params.type || 'button';
+
+    if (!hasType) {
+      this.attr('type', type);
     }
-    
-    return this;
-  },
-  
-  render: function(){
-    return this._super.apply(this);
+
+    return this.callParent(arguments);
   }
 
-});  
+});
+
+
+/*
+var pencil = require('pencil')
+  , Base = pencil.nodes.Custom
+  , BaseProto = Base.prototype
+  ;
+
+var Button = module.exports = function Tag (node, params) {
+
+  Base.apply(this, arguments);
+
+};
+
+// Extends from `pencil.nodes.Custom`
+
+pencil.inherits(Button, Base);
+
+Button.prototype.render = function () {
+
+  this.name = 'button';
+
+  if (!this.attr('type')) {
+    this.attr('type', this.params.type || 'button');
+  }
+
+  BaseProto.render.call(this);
+
+  return this;
+};
+*/

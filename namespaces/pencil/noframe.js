@@ -1,44 +1,38 @@
-/*!
- * Pencil
- * Copyright(c) 2013 Gabriele Di Stefano <gabriele.ds@gmail.com>
- * MIT Licensed
- */  
 
-var Pencil = require('../../')
+var pencil = require('../../')
+  , path = require('path')
   ;
 
-/**
- * noframe
- */
+module.exports = pencil.extend({
 
-Pencil.define('pencil.noframe', {
-  
-  extend: 'pencil.tag',
-  
-  /**
-   * @method initialize
-   */
-  
-  initialize: function(){
-    this._super.apply(this);
+  render: function () {
     
-    var style = this.tag.tag('style')
-      , script = Pencil.tag('pencil:script')
-      ;
+    this.name = 'div';
+    //this.template(path.join(__dirname, 'noframe.pencil'), {});
+
+    var div1 = pencil.create({oo: '1'});
+    var div2 = pencil.create({oo: '2'});
+    var div3 = pencil.create({oo: '3'});
+    var div4 = pencil.create({oo: '4'});
+    var div5 = pencil.create({oo: '5'});
+    var ciao = pencil.create({oo: 'ciao'});
+
     
-    style.attr({
-      'id': 'nb1',
-      'type': 'text/css'
-    }).html('body{ display: none !important; }');
-    script.attr('id', 'nb2').html('(function(win,doc){if(win.top===win.self){function nb(id,el){el=doc.getElementById(id);el.parentNode.removeChild(el);}nb(\'nb1\');nb(\'nb2\');}else{win.top.location=win.self.location;}}(window,window.document));');
+    this.append(div1);
+    this.append(div2);
+    this.append(div3);
+    this.append(div4);
+    this.append(div5);
 
-    style.parent.append(script);
+    div1.appendTo(this);
+    div2.appendTo(this);
+    div3.appendTo(this);
+    div4.appendTo(this);
+    div5.appendTo(this);
 
-    return this;
-  },
-  
-  render: function(){
-    return this._super.apply(this);
+    div3.after(ciao);
+
+    return this.callParent(arguments);
   }
 
-});  
+});

@@ -1,18 +1,21 @@
 # History
 
-0.2.0 / (roadmap)
+2.0.0 / (roadmap)
 ------------------
 
-  * ~~Create Express middleware to support Pencil, it should replace the #attach() method~~
   * Bootstrap support
   * More examples
-  * Make all default components
 
-0.1.5 / (current)
+1.0.0 / 2013-05-19
+------------------
+
+  * Huge refactoring
+  * Lighting
+
+0.1.5 / 2012-12-31
 ------------------
 
   * Added return on #start and #stop
-  * Fixing and factoring
 
 0.1.4 / 2012-11-12
 ------------------

@@ -1,52 +1,78 @@
-/*!
- * Pencil
- * Copyright(c) 2013 Gabriele Di Stefano <gabriele.ds@gmail.com>
- * MIT Licensed
- */  
 
-var Pencil = require('../../')
+var pencil = require('../../')
   ;
 
-/**
- * form
- */
+module.exports = pencil.extend({
 
-Pencil.define('pencil.form', {
-  
-  extend: 'pencil.tag',
-  
-  /**
-   * @method initialize
-   */
-  
-  initialize: function(){
-    this._super.apply(this);
-    
-    var tag = this.tag.tag('form')
-      , method = tag.attr('method') || tag.param('method')
+  render: function () {
+
+    this.name = 'form';
+
+    var method = this.attr('method')
+      , hasMethod = !!method
       ;
-    
-    if(method){
-      if(method === 'del'){
-        method = 'delete';
-      }
-      tag.attr('method', method == 'get' ? 'get' : 'post');
-    }else{
-      method = 'post';
-      tag.attr('method', method);
+
+    method = method || this.params.method || 'post';
+
+    if (method === 'del') {
+      method = 'delete';
+      hasMethod = false;
     }
     
-    tag.prepend(Pencil.tag('input').attr({
+    if (!hasMethod || (method != 'get' && method != 'post')) {
+      this.attr('method', method == 'get' ? 'get' : 'post');
+    }
+     
+    this.prepend(pencil.create('input', {
       'type': 'hidden',
       'name': '_method',
       'value': method
     }));
-    
-    return this;
-  },
-  
-  render: function(){
-    return this._super.apply(this);
+        
+    return this.callParent(arguments);
   }
 
-});  
+});
+
+
+/*
+var pencil = require('pencil')
+  , Base = pencil.nodes.Custom
+  , BaseProto = Base.prototype
+  ;
+
+var Form = module.exports = function Tag (node, params) {
+
+  Base.apply(this, arguments);
+
+};
+
+// Extends from `pencil.nodes.Custom`
+
+pencil.inherits(Form, Base);
+
+Form.prototype.render = function () {
+
+  this.name = 'form';
+
+  var method = this.attr('method') || this.params.method || 'post'
+    ;
+
+  if (method === 'del') {
+    method = 'delete';
+  }
+  
+  this.attr('method', method == 'get' ? 'get' : 'post');
+	  
+  //tag.prepend(Pencil.tag('input').attr({
+  //  'type': 'hidden',
+  //  'name': '_method',
+  //  'value': method
+  //}));
+	
+
+  BaseProto.render.call(this);
+
+  return this;
+};
+*/

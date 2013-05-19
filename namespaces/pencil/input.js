@@ -1,40 +1,76 @@
-/*!
- * Pencil
- * Copyright(c) 2013 Gabriele Di Stefano <gabriele.ds@gmail.com>
- * MIT Licensed
- */  
 
-var Pencil = require('../../')
+var pencil = require('../../')
   ;
 
-/**
- * form
- */
+module.exports = pencil.extend({
 
-Pencil.define('pencil.input', {
-  
-  extend: 'pencil.tag',
-  
-  /**
-   * @method initialize
-   */
-  
-  initialize: function(){
-    this._super.apply(this);
-    
-    var tag = this.tag.tag('input')
-      , type = tag.param('type') || 'button'
+  render: function () {
+
+    this.name = 'input';
+
+    var type = this.attr('type')
+      , hasType = !!type
+      , name = this.attr('name')
+      , hasName = !!name
+      , value = this.attr('value')
+      , hasValue = !!value
       ;
     
-    if(!tag.attr('type')){
-      tag.attr('type', type);
+    type = type || this.params.type || 'text';
+    name = name || this.params.name;
+    value = value || this.params.value;
+
+    if (!hasType) {
+      this.attr('type', type);
     }
-    
-    return this;
-  },
-  
-  render: function(){
-    return this._super.apply(this);
+
+    if (!hasName && name) {
+      this.attr('name', name);
+    }
+
+    if (!hasValue && value) {
+      this.attr('value', value);
+    }
+
+    return this.callParent(arguments);
   }
 
-});  
+});
+
+/*
+var pencil = require('pencil')
+  , Base = pencil.nodes.Custom
+  , BaseProto = Base.prototype
+  ;
+
+var Input = module.exports = function Tag (node, params) {
+
+  Base.apply(this, arguments);
+
+};
+
+// Extends from `pencil.nodes.Custom`
+
+pencil.inherits(Input, Base);
+
+Input.prototype.render = function () {
+
+  this.name = 'input';
+
+  if (!this.attr('type')) {
+    this.attr('type', this.params.type || 'button');
+  }
+
+  if (!this.attr('name') && this.params.name) {
+    this.attr('name', this.params.name);
+  }
+
+  if (!this.attr('value') && this.params.value) {
+    this.attr('value', this.params.value);
+  }
+
+  BaseProto.render.call(this);
+
+  return this;
+};
+*/

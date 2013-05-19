@@ -1,40 +1,54 @@
-/*!
- * Pencil
- * Copyright(c) 2013 Gabriele Di Stefano <gabriele.ds@gmail.com>
- * MIT Licensed
- */  
 
-var Pencil = require('../../')
+var pencil = require('../../')
   ;
 
-/**
- * form
- */
+module.exports = pencil.extend({
 
-Pencil.define('pencil.html', {
-  
-  extend: 'pencil.tag',
-  
-  /**
-   * @method initialize
-   */
-  
-  initialize: function(){
-    this._super.apply(this);
-    
-    var tag = this.tag.tag('html')
-      , type = tag.param('lang') || 'en'
+  render: function () {
+
+    this.name = 'html';
+
+    var lang = this.attr('lang')
+      , hasLang = !!lang
       ;
     
-    if(!tag.attr('lang')){
-      tag.attr('lang', type);
+    lang = lang || this.params.lang || 'en';
+
+    if (!hasLang) {
+      this.attr('lang', lang);
     }
-    
-    return this;
-  },
-  
-  render: function(){
-    return this._super.apply(this);
+
+    return this.callParent(arguments);
   }
 
-});  
+});
+
+/*
+var pencil = require('pencil')
+  , Base = pencil.nodes.Custom
+  , BaseProto = Base.prototype
+  ;
+
+var Html = module.exports = function Tag (node, params) {
+
+  Base.apply(this, arguments);
+  
+};
+
+// Extends from `pencil.nodes.Custom`
+
+pencil.inherits(Html, Base);
+
+Html.prototype.render = function () {
+
+  this.name = 'html';
+
+  if (!this.attr('lang')) {
+    this.attr('lang', this.params.lang || 'en');
+  }
+
+  BaseProto.render.call(this);
+
+  return this;
+};
+*/

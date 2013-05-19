@@ -1,39 +1,18 @@
-/*!
- * Pencil
- * Copyright(c) 2013 Gabriele Di Stefano <gabriele.ds@gmail.com>
- * MIT Licensed
- */  
 
-var Pencil = require('../../')
+var pencil = require('../../')
   ;
 
-/**
- * form
- */
+module.exports = pencil.extend({
 
-Pencil.define('pencil.script', {
-  
-  extend: 'pencil.tag',
-  
-  /**
-   * @method initialize
-   */
-  
-  initialize: function(){
-    this._super.apply(this);
-    
-    var tag = this.tag.tag('script')
-      ;
+  render: function () {
+
+    this.name = 'script';
       
-    if(!tag.attr('type')){
-      tag.attr('type', 'text/javascript');
+    if (!this.attr('type')) {
+      this.attr('type', 'text/javascript');
     }
-    
-    return this;
-  },
-  
-  render: function(){
-    return this._super.apply(this);
+
+    return this.callParent(arguments);
   }
 
-});  
+});

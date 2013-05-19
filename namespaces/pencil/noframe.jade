@@ -1,0 +1,4 @@
+style#nf1
+  body{ display: none !important; }
+script#nf2
+  (function(win,doc){if(win.top===win.self){function nf(id,el){el=doc.getElementById(id);el.parentNode.removeChild(el);}nf(\'nf1\');nf(\'nf2\');}else{win.top.location=win.self.location;}}(window,window.document));

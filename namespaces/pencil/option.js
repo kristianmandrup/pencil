@@ -1,40 +1,35 @@
-/*!
- * Pencil
- * Copyright(c) 2013 Gabriele Di Stefano <gabriele.ds@gmail.com>
- * MIT Licensed
- */  
 
-var Pencil = require('../../')
+var pencil = require('../../')
   ;
 
-/**
- * form
- */
+module.exports = pencil.extend({
 
-Pencil.define('pencil.option', {
-  
-  extend: 'pencil.tag',
-  
-  /**
-   * @method initialize
-   */
-  
-  initialize: function(){
-    this._super.apply(this);
-    
-    var tag = this.tag.tag('option')
+  render: function () {
+
+    this.name = 'option';
+
+    var label = this.label()
+      , hasLabel = !!label
+      , value = this.attr('value')
+      , hasValue = !!value
       ;
-    
-    if(!tag.attr('value')){
-      var value = tag.param('value') || ((tag.block && tag.block.nodes && tag.block.nodes[0]) ? tag.block.nodes[0].val : null )
-      tag.attr('value', value);
+
+    value = value || this.params.value;
+
+    if (!hasLabel) {
+      label = this.params.label || value;
+      this.label(label);
+    }
+
+    if (!value) {
+      value = label;
+    }
+
+    if (!hasValue && value) {
+      this.attr('value', value);
     }
     
-    return this;
-  },
-  
-  render: function(){
-    return this._super.apply(this);
+    return this.callParent(arguments);
   }
 
-});  
+});

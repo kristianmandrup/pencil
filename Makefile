@@ -1,7 +1,7 @@
 
 REPORTER = dot
 
-all: clean test docs
+all: test
 
 clean:
 	@rm -rf docs
@@ -14,4 +14,4 @@ docs:
 	@mkdir -p docs/pencil
 	@node ./support/docs
 
-.PHONY: clean test docs
+.PHONY: test

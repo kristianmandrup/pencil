@@ -1,59 +1,34 @@
-/*!
- * Pencil
- * Copyright(c) 2013 Gabriele Di Stefano <gabriele.ds@gmail.com>
- * MIT Licensed
- */  
 
-var Pencil = require('../../')
+var pencil = require('../../')
   ;
 
-/**
- * form
- */
+module.exports = pencil.extend({
 
-Pencil.define('pencil.style', {
-  
-  extend: 'pencil.tag',
-  
-  /**
-   * @method initialize
-   */
-  
-  initialize: function(){
-    this._super.apply(this);
-    
-    var tag = this.tag
-      , source = tag.attr('href') || tag.attr('src')
+  render: function () {
+
+    var source = this.attr('href') || this.attr('src')
       , hasSource = !!source
+      , attrs = { 'type': 'text/css' }
       ;
 
     if(hasSource){
-      tag.removeAttr('href', 'src');
+      this.removeAttr('href', 'src');
     }
 
-    if((tag && tag.parent && tag.parent.name === 'head') || hasSource){
-      // inside the header
-      tag
-        .tag('link')
-        .attr({
-          'type': 'text/css',
-          'rel': 'stylesheet',
-          'href': source
-        })
-      ;
-    }else{
-      // inside the body
-      tag
-        .tag('style')
-        .attr('type', 'text/css')
-      ;
+    if (hasSource && this.parent && 'head' == this.parent.name) {
+      this.name = 'link';
+      attrs.rel = 'stylesheet';
+      if (hasSource) {
+        attrs.href = source;
+      }
     }
-    
-    return this;
-  },
-  
-  render: function(){
-    return this._super.apply(this);
+    else {
+      this.name = 'style';
+    }
+
+    this.attr(attrs);
+
+    return this.callParent(arguments);
   }
 
-});  
+});
