@@ -1,6 +1,20 @@
 
+/*!
+ * pencil
+ * Copyright(c) 2013 Gabriele Di Stefano <gabriele.ds@gmail.com>
+ * MIT Licensed
+ */
+
+/**
+ * Module dependencies.
+ */
+
 var pencil = require('../../')
   ;
+
+/**
+ * Expose.
+ */
 
 module.exports = pencil.extend({
 
@@ -22,33 +36,3 @@ module.exports = pencil.extend({
   }
 
 });
-
-/*
-var pencil = require('pencil')
-  , Base = pencil.nodes.Custom
-  , BaseProto = Base.prototype
-  ;
-
-var Html = module.exports = function Tag (node, params) {
-
-  Base.apply(this, arguments);
-  
-};
-
-// Extends from `pencil.nodes.Custom`
-
-pencil.inherits(Html, Base);
-
-Html.prototype.render = function () {
-
-  this.name = 'html';
-
-  if (!this.attr('lang')) {
-    this.attr('lang', this.params.lang || 'en');
-  }
-
-  BaseProto.render.call(this);
-
-  return this;
-};
-*/
