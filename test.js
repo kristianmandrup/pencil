@@ -20,7 +20,6 @@ pencil.define('pencil.orca', {
   render: function () {
     this.name = 'r';
     this.callParent();
-    
 
     return this;
   }
