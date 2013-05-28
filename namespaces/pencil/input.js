@@ -18,6 +18,11 @@ var pencil = require('../../')
 
 module.exports = pencil.extend({
 
+  init: function () {
+
+    this.callParent(arguments);
+    console.log('aaaaaa', 'INPUT' + this.name);
+  },
   render: function () {
 
     this.name = 'input';

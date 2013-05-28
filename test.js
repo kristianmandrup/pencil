@@ -9,7 +9,7 @@ var pencil = require('./lib/pencil')
 
 pencil.use('default');
 pencil.use('pencil-bootstrap');
-pencil.namespace(path.join(__dirname, '..', 'nando-validator', 'app', 'tags', 'nando'))
+pencil.namespace(path.join(__dirname, '..', 'nando-http', 'app', 'custom_tags', 'nando'))
 
 pencil.define('pencil.orca', {
 
@@ -18,7 +18,7 @@ pencil.define('pencil.orca', {
   default: true,
 
   render: function () {
-    this.name = 'r';
+    //this.name = 'r';
     this.callParent();
 
     return this;

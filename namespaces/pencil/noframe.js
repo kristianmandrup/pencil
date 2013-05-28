@@ -22,7 +22,7 @@ module.exports = pencil.extend({
   render: function () {
     
     this.name = 'div';
-    //this.template(path.join(__dirname, 'noframe.jade'), {});
+    this.template(path.join(__dirname, 'noframe.jade'), {});
 
     var div1 = pencil.create({oo: '1'});
     var div2 = pencil.create({oo: '2'});
