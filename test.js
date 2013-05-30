@@ -1,6 +1,7 @@
 
 var pencil = require('./lib/pencil')
   , path = require('path')
+  , $h = pencil.Helper
   ;
 
 //
@@ -8,17 +9,29 @@ var pencil = require('./lib/pencil')
 //
 
 pencil.use('default');
-pencil.use('pencil-bootstrap');
-pencil.namespace(path.join(__dirname, '..', 'nando-http', 'app', 'custom_tags', 'nando'))
+//pencil.use('pencil-bootstrap');
+//pencil.namespace(path.join(__dirname, '..', 'nando-http', 'app', 'custom_tags', 'nando'))
 
 pencil.define('pencil.orca', {
 
-  extend: 'pencil.custom',//pencil.nodes.Container, //'pencil.form',
+  extend: 'pencil.component',//pencil.nodes.Container, //'pencil.form',
 
   default: true,
 
   render: function () {
-    //this.name = 'r';
+    
+    this.name = 'gg';
+
+    
+    this.input1 = pencil.create('pencil:input');
+    this.input2 = pencil.create('pencil:input');
+
+    var gino = $h(this.input1, this.input2);
+
+    gino.attr('111', '2222');
+    // this.append(gino);
+
+
     this.callParent();
 
     return this;
