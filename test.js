@@ -4,13 +4,14 @@ var pencil = require('./lib/pencil')
   , $h = pencil.Helper
   ;
 
+
 //
 // Defaults namespaces
 //
 
 pencil.use('default');
-//pencil.use('pencil-bootstrap');
-//pencil.namespace(path.join(__dirname, '..', 'nando-http', 'app', 'custom_tags', 'nando'))
+pencil.use('pencil-bootstrap');
+pencil.namespace(path.join(__dirname, '..', 'nando-http', 'app', 'custom_tags', 'nando'))
 
 pencil.define('pencil.orca', {
 
@@ -28,7 +29,7 @@ pencil.define('pencil.orca', {
 
     var gino = $h(this.input1, this.input2);
 
-    gino.attr('111', '2222');
+    //gino.attr('111', '2222');
     // this.append(gino);
 
 
