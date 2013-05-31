@@ -21,8 +21,8 @@ module.exports = pencil.extend({
   init: function () {
 
     this.callParent(arguments);
-    console.log('aaaaaa', 'INPUT' + this.name);
   },
+  
   render: function () {
 
     this.name = 'input';
@@ -35,9 +35,9 @@ module.exports = pencil.extend({
       , hasValue = !!value
       ;
     
-    type = type || this.params.type || 'text';
-    name = name || this.params.name;
-    value = value || this.params.value;
+    type = type || this.data('type') || 'text';
+    name = name || this.data('name');
+    value = value || this.data('value');
 
     if (!hasType) {
       this.attr('type', type);

@@ -26,7 +26,7 @@ module.exports = pencil.extend({
       , hasType = !!type
       ;
     
-    type = type || this.params.type || 'button';
+    type = type || this.data('type') || 'button';
 
     if (!hasType) {
       this.attr('type', type);

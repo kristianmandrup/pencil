@@ -22,7 +22,7 @@ module.exports = pencil.extend({
 
     this.name = 'meta';
 
-    var type = this.params.type;
+    var type = this.data('type');
 
     if (type) {  
       if ('charset' == type) {

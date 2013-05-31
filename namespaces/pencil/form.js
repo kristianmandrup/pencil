@@ -26,7 +26,7 @@ module.exports = pencil.extend({
       , hasMethod = !!method
       ;
 
-    method = method || this.params.method || 'post';
+    method = method || this.data('method') || 'post';
 
     if (method === 'del') {
       method = 'delete';

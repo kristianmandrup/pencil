@@ -26,7 +26,7 @@ module.exports = pencil.extend({
       , hasLang = !!lang
       ;
     
-    lang = lang || this.params.lang || 'en';
+    lang = lang || this.data('lang') || 'en';
 
     if (!hasLang) {
       this.attr('lang', lang);

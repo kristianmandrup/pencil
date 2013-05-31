@@ -28,10 +28,10 @@ module.exports = pencil.extend({
       , hasValue = !!value
       ;
 
-    value = value || this.params.value;
+    value = value || this.data('value');
 
     if (!hasLabel) {
-      label = this.params.label || value;
+      label = this.data('label') || value;
       this.label(label);
     }
 
