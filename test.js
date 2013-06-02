@@ -9,9 +9,11 @@ var pencil = require('./lib/pencil')
 // Defaults namespaces
 //
 
-pencil.use('default');
-pencil.use('pencil-bootstrap');
-pencil.namespace(path.join(__dirname, '..', 'nando-http', 'app', 'custom_tags', 'nando'))
+pencil.use(
+  'default',
+  'pencil-bootstrap',
+  path.join(__dirname, '..', 'nando-http', 'app', 'custom_tags', 'nando')
+)
 
 pencil.define('pencil.orca', {
 
