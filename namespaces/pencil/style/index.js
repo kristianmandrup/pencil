@@ -9,7 +9,7 @@
  * Module dependencies.
  */
 
-var pencil = require('../../')
+var pencil = require('../../../')
   ;
 
 /**
@@ -20,7 +20,7 @@ module.exports = pencil.extend({
 
   render: function () {
 
-    var source = this.attr('href') || this.attr('src')
+    var source = this.data('href') || this.attr('href') || this.attr('src')
       , hasSource = !!source
       , attrs = { 'type': 'text/css' }
       ;
