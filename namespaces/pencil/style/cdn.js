@@ -10,6 +10,7 @@
  */
 
 var pencil = require('../../../')
+  , baseUrl = '/nando/lib/'
   ;
 
 /**
@@ -24,12 +25,14 @@ module.exports = pencil.extend({
     
     var library = this.data('library');
     
-    if(library === 'bootstrap'){
-      library = '/css/bootstrap.min.css';
+    if ('bootstrap' === library) {
+      library = baseUrl + 'bootstrap/css/bootstrap.min.css';
+    }
+    else if ('bootstrap-responsive' === library) {
+      library = baseUrl + 'bootstrap/css/bootstrap-responsive.min.css';
     }
 
     this.data('href', library);
-
 
     return this.callParent(arguments);
   }

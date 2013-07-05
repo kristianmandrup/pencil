@@ -54,7 +54,8 @@
 
     "pencil.script.cdn": {
       "alias": [
-        "script:?library"
+        "script:?library",
+        "script:?library:*"
       ]
     },
 

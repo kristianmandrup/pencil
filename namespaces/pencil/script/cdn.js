@@ -11,7 +11,7 @@
 
 var pencil = require('../../../')
   , min = 'production' == process.env.NODE_ENV
-  , baseUrl = '//cdnjs.cloudflare.com/ajax/libs/'
+  , baseUrl = '/nando/lib/'
   ;
 
 /**
@@ -24,21 +24,70 @@ module.exports = pencil.extend({
 
   render: function () {
     
-    var library = this.data('library');
+    var library = this.data('library')
+      , details = this.data('wildcard')[0];
     
-    if(library === 'jquery'){
-      library = baseUrl + 'jquery/1.8.3/jquery.min.js';
+    if ('angular' === library) {
+      library = baseUrl + 'angular/angular.min.js';
     }
-    else if(library == 'lodash'){
-      library = baseUrl + 'lodash.js/1.0.0-rc.3/lodash.min.js';
+    else if ('angular-resource' === library) {
+      library = baseUrl + 'angular-resource/angular-resource.min.js';
     }
-    else if(library == 'angular'){
-      library = baseUrl + 'angular.js/1.1.1/angular.min.js';
+    else if ('angular-router' === library) {
+      library = baseUrl + 'angular-ui-router/release/angular-ui-router.min.js';
     }
-    else if(library == 'require'){
-      //link = baseUrl + 'require.js/2.1.1/require.min.js';
-      library = '/js/libs/require/require.min.js';
+    else if ('angular-bootstrap' === library) {
+      library = baseUrl + 'angular-bootstrap/build/ui-bootstrap-tpls.min.js';
+    }
+    else if ('ace' === library) {
+      details = details || 'ace';
+      library = baseUrl + 'ace/build/src-min-noconflict/' + details + '.js';
+    }
+    else if ('angular-ui-ace' === library) {
+      library = baseUrl + 'angular-ui-ace/ui-ace.min.js';
+    }
+    else if ('codemirror' === library) {
+      library = baseUrl + 'codemirror/lib/codemirror.js';
+    }
+    else if ('angular-ui-codemirror' === library) {
+      library = baseUrl + 'angular-ui-codemirror/ui-codemirror.min.js';
+    }
+    else if ('bootstrap' === library) {
+      library = baseUrl + 'bootstrap/js/bootstrap.min.js';
+    }
+    else if ('html5shiv' === library) {
+      library = baseUrl + 'html5shiv/html5shiv.js';
+    }
+    else if ('html5shiv-printshiv' === library) {
+      library = baseUrl + 'html5shiv/html5shiv-printshiv.js';
+    }
+    else if ('jquery' === library) {
+      library = baseUrl + 'jquery/jquery.min.js';
+    }
+    else if ('jquery-drag' === library) {
+      library = baseUrl + 'jquery-drag/jquery.event.drag.js';
+    }
+    else if ('jquery-drag-live' === library) {
+      library = baseUrl + 'jquery-drag/jquery.event.drag.live.js';
+    }
+    else if ('jquery-drop' === library) {
+      library = baseUrl + 'jquery-drop/jquery.event.drop.js';
+    }
+    else if ('jquery-drop-live' === library) {
+      library = baseUrl + 'jquery-drop/jquery.event.drop.live.js';
+    }
+    else if ('json' === library) {
+      library = baseUrl + 'json/json2.min.js';
+    }
+    else if ('lodash' === library) {
+      library = baseUrl + 'lodash/dist/lodash.min.js';
+    }
+    else if ('require' === library) {
+      library = 'require/require.min.js';
       this.attr('data-main', this.attr('src'));
+    }
+    else if ('restangular' === library) {
+      library = baseUrl + 'restangular/dist/restangular.min.js';
     }
     
     this.attr('src', library);
