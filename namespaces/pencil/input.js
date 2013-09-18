@@ -16,7 +16,9 @@ var pencil = require('../../')
  * Expose.
  */
 
-module.exports = pencil.extend({
+module.exports = pencil.define('pencil.input', {
+
+  extend: 'pencil.custom',
 
   init: function () {
 

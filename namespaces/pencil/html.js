@@ -16,10 +16,11 @@ var pencil = require('../../')
  * Expose.
  */
 
-module.exports = pencil.extend({
+module.exports = pencil.define('pencil.html', {
+
+  extend: 'pencil.custom',
 
   render: function () {
-
     this.name = 'html';
 
     var lang = this.attr('lang')
@@ -32,7 +33,7 @@ module.exports = pencil.extend({
       this.attr('lang', lang);
     }
 
-    return this.callParent(arguments);
+    this.callParent(arguments);
   }
 
 });

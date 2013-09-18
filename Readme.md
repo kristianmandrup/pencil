@@ -1,3 +1,3 @@
-# pencil 1.0.0
+# pencil 1.1.0
 
 dev

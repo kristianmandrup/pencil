@@ -18,7 +18,7 @@ var pencil = require('../../../')
  * Expose.
  */
 
-module.exports = pencil.extend({
+module.exports = pencil.define('pencil.script.cdn', {
 
   extend: 'pencil.script',
 

@@ -16,7 +16,13 @@ var pencil = require('../../../')
  * Expose.
  */
 
-module.exports = pencil.extend({
+module.exports = pencil.define('pencil.script', {
+
+  extend: 'pencil.custom',
+
+  constructor: function Tag () {
+    this.callParent(arguments);
+  },
 
   render: function () {
 

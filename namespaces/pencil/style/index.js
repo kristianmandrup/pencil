@@ -16,7 +16,9 @@ var pencil = require('../../../')
  * Expose.
  */
 
-module.exports = pencil.extend({
+module.exports = pencil.define('pencil.style', {
+
+  extend: 'pencil.custom',
 
   render: function () {
 
@@ -24,7 +26,7 @@ module.exports = pencil.extend({
       , hasSource = !!source
       , attrs = { 'type': 'text/css' }
       ;
-
+      
     if(hasSource){
       this.removeAttr('href', 'src');
     }

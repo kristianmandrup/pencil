@@ -1,9 +1,9 @@
 
 var pencil = require('./lib/pencil')
+  , nando = require('../nando/lib2/nando')
   , path = require('path')
   , $h = pencil.Helper
   ;
-
 
 //
 // Defaults namespaces
@@ -11,8 +11,6 @@ var pencil = require('./lib/pencil')
 
 pencil.use(
   'default'
-  //'pencil-bootstrap',
-  //path.join(__dirname, '..', 'nando-http', 'app', 'tags', 'nando')
 );
 
 var url = path.join(__dirname, 'test.jade')

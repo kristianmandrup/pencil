@@ -1,6 +1,6 @@
 {
   "name": "pencil",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Custom tags/components for Jade. Extend and inherit",
   "license": "MIT",
   "author": {
@@ -26,9 +26,7 @@
   },
   "devDependencies": {
     "mocha": "*",
-    "uubench": "*",
-    "should": "*",
-    "commander": "*"
+    "should": "*"
   },
   "keywords": []
 }
